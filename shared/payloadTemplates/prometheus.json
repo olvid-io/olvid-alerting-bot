@@ -1,0 +1,45 @@
+{
+  "version": "4",
+  "groupKey": "{}:{alertname=\"HighMemoryUsage\"}",
+  "truncatedAlerts": 0,
+  "status": "firing",
+  "receiver": "webhook-receiver",
+  "groupLabels": {
+    "alertname": "HighMemoryUsage"
+  },
+  "commonLabels": {
+    "alertname": "HighMemoryUsage",
+    "environment": "production",
+    "job": "node-exporter",
+    "service": "api-gateway",
+    "severity": "warning"
+  },
+  "commonAnnotations": {
+    "summary": "Memory usage is above 85%",
+    "description": "The api-gateway service has been using 88.2% of available memory for the last 10 minutes.",
+    "runbook_url": "https://wiki.example.com/runbooks/high-memory"
+  },
+  "externalURL": "https://alertmanager.example.com",
+  "alerts": [
+    {
+      "status": "firing",
+      "labels": {
+        "alertname": "HighMemoryUsage",
+        "environment": "production",
+        "instance": "node-01.example.com:9100",
+        "job": "node-exporter",
+        "service": "api-gateway",
+        "severity": "warning"
+      },
+      "annotations": {
+        "summary": "Memory usage is above 85%",
+        "description": "The api-gateway service has been using 88.2% of available memory for the last 10 minutes.",
+        "runbook_url": "https://wiki.example.com/runbooks/high-memory"
+      },
+      "startsAt": "2026-06-30T15:20:00Z",
+      "endsAt": "0001-01-01T00:00:00Z",
+      "generatorURL": "https://prometheus.example.com/graph?g0.expr=node_memory_usage_ratio+%3E+0.85&g0.tab=1",
+      "fingerprint": "b7c9d1e2f3a45678"
+    }
+  ]
+}

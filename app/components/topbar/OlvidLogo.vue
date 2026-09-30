@@ -1,0 +1,24 @@
+<!--
+  - Olvid Alerting
+  - Copyright © 2026 Olvid SAS
+  -
+  - Olvid Alerting is free software: you can redistribute it and/or modify
+  - it under the terms of the GNU Affero General Public License, version 3,
+  - as published by the Free Software Foundation.
+  -
+  - Olvid Alerting is distributed in the hope that it will be useful,
+  - but WITHOUT ANY WARRANTY; without even the implied warranty of
+  - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  - GNU Affero General Public License for more details.
+  -
+  - You should have received a copy of the GNU Affero General Public License
+  - along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<template>
+  <svg viewBox="0 0 2405 2405" fill="currentColor" fill-rule="evenodd">
+    <path
+        d="M631 0c-349,0 -631,283 -631,631l0 1142c0,349 283,631 631,631l1142 0c349,0 631,-283 631,-631l0 -1142c0,-349 -283,-631 -631,-631l-1142 0zm983 1385c0,0 0,0 0,0 0,1 -6,14 -8,19 -10,22 -21,42 -33,62 -102,166 -270,239 -406,273 0,0 -56,12 -81,16 -210,35 -347,1 -347,1 0,0 167,-53 238,-152 -34,-20 -64,-44 -91,-73 -39,-42 -70,-91 -92,-147 -22,-56 -33,-117 -33,-183 0,-66 11,-128 33,-184 22,-57 52,-105 92,-147 39,-41 86,-74 140,-97 54,-23 114,-35 179,-35 65,0 124,12 179,35 54,23 101,56 140,97 39,41 70,90 92,147 22,56 33,118 33,184 0,66 -11,127 -33,183zm364 -504c-43,-99 -102,-186 -177,-259 -75,-73 -164,-131 -267,-173 -102,-42 -212,-63 -330,-63 -117,0 -227,21 -330,63 -102,42 -191,100 -267,173 -75,73 -134,159 -177,259 -43,99 -64,206 -64,321 0,114 21,221 64,321 43,99 102,186 177,259 75,73 164,131 267,173 102,42 212,63 330,63 118,0 227,-21 330,-63 102,-42 191,-100 267,-173 75,-73 134,-159 177,-259 43,-99 64,-206 64,-321 0,-114 -21,-221 -64,-321z"
+    />
+  </svg>
+</template>

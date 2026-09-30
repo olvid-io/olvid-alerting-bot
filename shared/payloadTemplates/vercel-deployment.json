@@ -1,0 +1,45 @@
+{
+  "id": "evt_ExampleVercelEvent01",
+  "type": "deployment.error",
+  "createdAt": 1782832832000,
+  "region": "cdg1",
+  "payload": {
+    "team": {
+      "id": "team_ExampleTeamId0001"
+    },
+    "user": {
+      "id": "user_ExampleUserId0001"
+    },
+    "deployment": {
+      "id": "dpl_ExampleDeploymentId01",
+      "name": "example-repo",
+      "url": "example-repo-a1b2c3d4e-example-org.vercel.app",
+      "inspectorUrl": "https://vercel.com/example-org/example-repo/ExampleDeploymentId01",
+      "meta": {
+        "githubCommitAuthorLogin": "jane-doe",
+        "githubCommitAuthorName": "Jane Doe",
+        "githubCommitMessage": "Fix typo in onboarding README",
+        "githubCommitOrg": "jane-doe",
+        "githubCommitRef": "main",
+        "githubCommitRepo": "example-repo",
+        "githubCommitSha": "ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+        "githubDeployment": "1",
+        "githubOrg": "jane-doe",
+        "githubRepo": "example-repo"
+      }
+    },
+    "links": {
+      "deployment": "https://vercel.com/example-org/example-repo/ExampleDeploymentId01",
+      "project": "https://vercel.com/example-org/example-repo"
+    },
+    "name": "example-repo",
+    "plan": "pro",
+    "project": {
+      "id": "prj_ExampleProjectId0001"
+    },
+    "regions": ["cdg1"],
+    "target": "production",
+    "type": "LAMBDAS",
+    "url": "example-repo-a1b2c3d4e-example-org.vercel.app"
+  }
+}

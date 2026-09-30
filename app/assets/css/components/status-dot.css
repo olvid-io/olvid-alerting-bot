@@ -1,0 +1,48 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* ── Status dots — unchanged ─────────────────────────────────────── */
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+
+    .sidebar-collapsed & {
+        /* 2. Status dot as an exponent in smaller size  */
+        position: relative;
+        bottom: 5px;
+        left: 40px;
+        width: 8px;
+        height: 8px;
+    }
+}
+
+.st-active {
+    background: var(--color-accent);
+    border: 1px solid var(--color-accent);
+}
+.st-inactive {
+    background: var(--color-text-dim);
+    border: 1px solid var(--color-text-dim);
+}
+.st-draft {
+    background: transparent;
+    border: 1px dashed var(--color-text-dim);
+}

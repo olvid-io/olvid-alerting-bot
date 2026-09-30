@@ -1,0 +1,50 @@
+# Anything platform-specific or already generated. In particular
+# node_modules must NOT be copied from the host: it contains the
+# `better-sqlite3` native binary compiled for whatever OS ran
+# `npm install` on the host (Windows / macOS). Rebuilding it inside
+# the Linux container is the only way `.node` will actually load.
+
+node_modules
+.output
+.nuxt
+.data
+.cache
+dist
+
+# Local runtime state
+data
+*.sqlite
+*.sqlite-journal
+*.db
+*.db-journal
+dev.db
+
+# Local env & VCS noise
+.env
+.env.*
+!.env.example
+.git
+.gitignore
+.github
+
+# Editor / OS junk
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Docker meta (avoid self-copy)
+.dockerignore
+Dockerfile
+docker-compose*.yaml
+docker-compose*.yml
+
+# Docs / non-runtime
+README.md
+docs

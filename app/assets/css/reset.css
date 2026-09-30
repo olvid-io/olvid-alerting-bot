@@ -1,0 +1,43 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* Global reset. Used to live inside layouts/default.vue's unscoped <style>
+ * block — moved here so it's loaded before anything else and so layouts
+ * stay focused on layout.
+ */
+
+body {
+  background-color: var(--color-bg-app);
+  color: var(--color-text-secondary);
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Lucide icons — ship at 24×24 by default. Scale to the surrounding text
+ * so they blend into buttons/labels the way FontAwesome used to (which
+ * defaulted to 1em). Override per instance with `width`/`height` or the
+ * `:size` prop when you need something specific. */
+svg.lucide {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em; /* nudge to align with text baseline */
+}

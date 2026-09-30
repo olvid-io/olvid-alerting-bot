@@ -1,0 +1,202 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* Mac-style code block — used by the format / condition editors.
+ * The .dot trio mimics window controls. Title is monospaced.
+ */
+
+.code-block {
+  display: flex;
+  flex-direction: column;
+
+
+  background: var(--color-bg-code);
+  border: 1px solid var(--color-border-code);
+
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+
+  flex-shrink: 0;
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) 15px;
+  background: var(--color-bg-code-header);
+  border-bottom: 1px solid #333;
+  gap: var(--space-3);
+}
+
+.code-title {
+  color: #858585;
+  font-family: var(--font-mono);
+  font-size: var(--text-m);
+  margin-left: var(--space-4);
+}
+.code-title-link{
+  color: #858585;
+  font-family: var(--font-mono);
+  font-size: var(--text-m);
+}
+.code-title-link:hover{
+  color: #323844;
+}
+.code-body {
+  padding: var(--space-4);
+  overflow-y: auto;
+  flex: 1;
+  color: var(--color-text-code);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-left: 2px;
+}
+.dot-red {
+  background: #ff5f56;
+}
+.dot-yellow {
+  background: #ffbd2e;
+}
+.dot-green {
+  background: #27c93f;
+}
+
+/* ── Monospace textareas (script / JSON payload) ──────────────────────────
+ * Sit inside a .code-block. The colour helpers (.hbs-color, .json-color)
+ * approximate VSCode token colours so the script (yellow) and the JSON
+ * payload (light blue) read as the editor surface they are.
+ */
+.editor-textarea {
+  width: 100%;
+  padding: var(--space-6);
+  background: var(--color-bg-code);
+  border: none;
+  outline: none;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  resize: vertical;
+  box-sizing: border-box;
+}
+.hbs-color {
+  color: #dcdcaa;
+  min-height: 150px;
+}
+.json-color {
+  color: #9cdcfe;
+  min-height: 250px;
+}
+
+.editor-textarea::-webkit-scrollbar {
+  width: 8px;
+}
+.editor-textarea::-webkit-scrollbar-thumb {
+  background: #38445c;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Tree-style payload viewer (XML / JSON click-to-pick) ──────────────── */
+.tree-panel {
+  padding: var(--space-4);
+  background: var(--color-bg-code);
+  overflow-y: auto;
+  min-height: 250px;
+  max-height: 360px;
+}
+.tree-panel::-webkit-scrollbar {
+  width: 8px;
+}
+.tree-panel::-webkit-scrollbar-thumb {
+  background: #182236;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Code-block notice strips (loading / empty / error) ──────────────── */
+.payload-notice {
+  background: var(--color-bg-code-header);
+  color: var(--color-warning);
+  font-size: var(--text-m);
+  font-family: var(--font-mono);
+  padding: var(--space-3) var(--space-5);
+  border-top: 1px solid #3a3a3a;
+}
+.payload-empty {
+  background: var(--color-bg-code);
+  color: var(--color-text-dim);
+  font-size: var(--text-base);
+  font-family: var(--font-mono);
+  padding: 30px var(--space-5);
+  text-align: center;
+  flex: 1;
+}
+
+/* ── Toolbar buttons for the dark IDE surface ─────────────────────────────
+ * Compact icon-style `.code-toggle-btn` (utility actions
+ * like prettify / clear) and `.code-toggle-btn-wide` for the primary "Load
+ * Template". 
+ */
+.code-toggle-btn {
+  background: var(--color-bg-code);
+  color: #a3a3a3;
+  border: 1px solid #343535;
+  border-radius: var(--radius-sm);
+  padding: 3px var(--space-4);
+  font-size: var(--text-m);
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+.code-toggle-btn:hover {
+  background: var(--color-bg-code-header);
+  color: var(--color-text-code);
+}
+
+.code-toggle-btn-wide {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px var(--space-3);
+  letter-spacing: 0.1px;
+}
+.code-toggle-btn-wide .caret {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  margin-top: 1px;
+  opacity: 0.7;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+.code-toggle-btn-wide.is-open {
+  background: #4a4a4a;
+  color: var(--color-text-code);
+  border-color: #6b6b6b;
+}
+.code-toggle-btn-wide.is-open .caret {
+  transform: rotate(180deg);
+  opacity: 1;
+}

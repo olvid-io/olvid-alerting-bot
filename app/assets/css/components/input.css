@@ -1,0 +1,141 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* Form inputs — one canonical shell used by the alert wizard, bundle
+ * editor, condition editor, user admin, and every future form.
+ *
+ * How to use:
+ *   <input class="field-input" … />                    ← default (border only on focus)
+ *   <input class="field-input field-focus" … />        ← add the accent halo ring
+ *   <input class="field-input is-invalid" … />         ← error border
+ *   <input class="field-input field-focus is-invalid"> ← error border + danger ring
+ *
+ * `.field-input:focus` bumps the border to the accent color — no halo.
+ * The 3-px halo ring is opt-in via `.field-focus` so tightly-packed
+ * rows (e.g. ConditionRuleRow's inline inputs) don't get a coloured
+ * bloom over their neighbours. Same rule for the danger ring in the
+ * error state: opt in with `.field-focus`.
+ *
+ * Components should NOT redeclare `.field-input {…}` locally; if you
+ * need a size variant or a shape tweak, wrap in a specific class next
+ * to `.field-input` (e.g. `<input class="field-input rule-input">`)
+ * and style only what differs.
+ */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.field-label {
+  margin: 0;
+  padding-top: 4px; /* baseline-align with the first line of value */
+  font-size: var(--text-m);
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.field-hint {
+  margin: 0;
+  color: var(--color-text-dim);
+  font-size: var(--text-m);
+  line-height: 1.5;
+}
+
+.hint {
+  color: var(--color-text-faint);
+  font-size: var(--text-s);
+  font-style: italic;
+}
+
+.field-required {
+  color: var(--color-danger);
+}
+
+/* ── Canonical input shell ───────────────────────────────────────────── */
+.field-input {
+  width: 100%;
+  height: 35px;
+  box-sizing: border-box;
+  padding: var(--space-3) var(--space-4);
+
+  background: var(--color-bg-input);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+
+  font-family: inherit;
+  font-size: var(--text-base);
+  resize: vertical;
+
+  outline: none;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.field-input::placeholder {
+  color: var(--color-border-default);
+}
+
+.field-input:hover:not(:disabled):not([readonly]):not(:focus) {
+  border-color: var(--color-border-strong);
+}
+
+.field-input:focus {
+  border-color: var(--color-accent);
+}
+
+.field-input:disabled,
+.field-input[readonly] {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: var(--color-bg-card);
+}
+
+/* Error state — border flips to danger. Apply as
+ * `<input class="field-input is-invalid">` (or the legacy `error`). */
+.field-input.is-invalid,
+.field-input.error {
+  border-color: var(--color-danger);
+}
+
+/* Opt-in halo ring. Add `.field-focus` alongside `.field-input` when the
+ * field is prominent enough to deserve one (auth forms, standalone
+ * search boxes). Skip it for dense grids of inline inputs. */
+.field-input.field-focus:focus {
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-accent) 15%, transparent);
+}
+.field-input.field-focus.is-invalid:focus,
+.field-input.field-focus.error:focus {
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-danger) 20%, transparent);
+}
+
+/* Native <select> uses the same shell — `appearance: auto` keeps the
+ * platform chevron so we don't ship an extra SVG. */
+select.field-input {
+  cursor: pointer;
+  appearance: auto;
+}
+select.field-input:disabled {
+  cursor: not-allowed;
+}

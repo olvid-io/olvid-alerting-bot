@@ -1,0 +1,107 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* ── Preview strip ────────────────────────────────────────────────────
+Used in condition editor and test-poll modal to show a summary of the polling result*/
+
+.preview-strip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-xl);
+  border: 1px solid;
+  font-size: var(--text-m);
+}
+.preview-strip.ok {
+  background: var(--color-success-soft);
+  border-color: var(--color-success-border);
+  color: var(--color-success-bright);
+}
+.preview-strip.no {
+  background: var(--color-bg-card-soft);
+  border-color: var(--color-border-default);
+  color: var(--color-text-secondary);
+}
+.preview-strip .bullet {
+  font-size: var(--text-2xl);
+  line-height: 1;
+}
+.preview-strip.ok .bullet {
+  color: var(--color-success);
+}
+.preview-strip.no .bullet {
+  color: var(--color-text-dim);
+}
+.preview-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.preview-detail {
+  margin-left: auto;
+  color: var(--color-text-muted);
+  font-size: var(--text-s);
+  max-width: 100%;
+}
+.preview-detail summary {
+  cursor: pointer;
+  user-select: none;
+}
+.preview-detail summary:hover {
+  color: var(--color-accent-text);
+}
+.preview-detail ul {
+  margin: var(--space-2) 0 0;
+  padding: var(--space-3) var(--space-4);
+  list-style: none;
+  background: var(--color-bg-input); /* deeper than the strip, theme-aware */
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+.preview-detail li {
+  font-family: var(--font-mono);
+  font-size: var(--text-s);
+}
+.preview-detail li.ok {
+  color: var(--color-success-bright);
+}
+.preview-detail li.no {
+  color: var(--color-text-secondary);
+}
+.preview-detail code {
+  color: var(--color-accent-text);
+  background: var(
+    --color-border-subtle
+  ); /* theme-aware so accent-text stays legible */
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+/* Per-field breakdown text colors — dim defaults are too pale on the new
+ * light-mode preview surface, so use the regular text tokens. */
+.preview-detail li.ok {
+  color: var(--color-success);
+}
+.preview-detail li.no {
+  color: var(--color-text-secondary);
+}

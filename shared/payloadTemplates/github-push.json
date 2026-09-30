@@ -1,0 +1,125 @@
+{
+  "ref": "refs/heads/main",
+  "before": "6113728f27ae82c7b1a177c8d03f9e96e0adf246",
+  "after": "ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+  "created": false,
+  "deleted": false,
+  "forced": false,
+  "base_ref": null,
+  "compare": "https://github.com/jane-doe/example-repo/compare/6113728f27ae...ec26c3e57ca3",
+  "commits": [
+    {
+      "id": "ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+      "tree_id": "a1b2c3d4e5f67890abcdef1234567890fedcba98",
+      "distinct": true,
+      "message": "Fix typo in onboarding README",
+      "timestamp": "2026-06-30T15:20:32Z",
+      "url": "https://github.com/jane-doe/example-repo/commit/ec26c3e57ca3",
+      "author": {
+        "name": "Jane Doe",
+        "email": "owner@example.com",
+        "username": "jane-doe"
+      },
+      "committer": {
+        "name": "Jane Doe",
+        "email": "owner@example.com",
+        "username": "jane-doe"
+      },
+      "added": [],
+      "removed": [],
+      "modified": ["docs/getting-started.md"]
+    }
+  ],
+  "head_commit": {
+    "id": "ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+    "tree_id": "a1b2c3d4e5f67890abcdef1234567890fedcba98",
+    "distinct": true,
+    "message": "Fix typo in onboarding README",
+    "timestamp": "2026-06-30T15:20:32Z",
+    "url": "https://github.com/jane-doe/example-repo/commit/ec26c3e57ca3",
+    "author": {
+      "name": "Jane Doe",
+      "email": "owner@example.com",
+      "username": "jane-doe"
+    },
+    "committer": {
+      "name": "Jane Doe",
+      "email": "owner@example.com",
+      "username": "jane-doe"
+    },
+    "added": [],
+    "removed": [],
+    "modified": ["docs/getting-started.md"]
+  },
+  "repository": {
+    "id": 100000001,
+    "node_id": "MDEwOlJlcG9zaXRvcnkxMDAwMDAwMDE=",
+    "name": "example-repo",
+    "full_name": "jane-doe/example-repo",
+    "private": false,
+    "owner": {
+      "name": "jane-doe",
+      "email": "owner@example.com",
+      "login": "jane-doe",
+      "id": 1000001,
+      "node_id": "MDQ6VXNlcjEwMDAwMDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1000001?v=4",
+      "url": "https://api.github.com/users/jane-doe",
+      "html_url": "https://github.com/jane-doe",
+      "type": "User",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/jane-doe/example-repo",
+    "description": "Example repository for webhook notifications",
+    "fork": false,
+    "url": "https://github.com/jane-doe/example-repo",
+    "hooks_url": "https://api.github.com/repos/jane-doe/example-repo/hooks",
+    "commits_url": "https://api.github.com/repos/jane-doe/example-repo/commits{/sha}",
+    "contents_url": "https://api.github.com/repos/jane-doe/example-repo/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/jane-doe/example-repo/compare/{base}...{head}",
+    "releases_url": "https://api.github.com/repos/jane-doe/example-repo/releases{/id}",
+    "created_at": 1715783965,
+    "updated_at": "2026-06-29T15:20:41Z",
+    "pushed_at": 1751303432,
+    "git_url": "git://github.com/jane-doe/example-repo.git",
+    "ssh_url": "git@github.com:jane-doe/example-repo.git",
+    "clone_url": "https://github.com/jane-doe/example-repo.git",
+    "homepage": null,
+    "size": 412,
+    "stargazers_count": 12,
+    "watchers_count": 12,
+    "language": "TypeScript",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "forks_count": 1,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 2,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "default_branch": "main",
+    "master_branch": "main",
+    "topics": ["example", "demo"],
+    "visibility": "public"
+  },
+  "pusher": {
+    "name": "jane-doe",
+    "email": "owner@example.com"
+  },
+  "sender": {
+    "login": "jane-doe",
+    "id": 1000001,
+    "node_id": "MDQ6VXNlcjEwMDAwMDE=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1000001?v=4",
+    "url": "https://api.github.com/users/jane-doe",
+    "html_url": "https://github.com/jane-doe",
+    "type": "User",
+    "site_admin": false
+  }
+}

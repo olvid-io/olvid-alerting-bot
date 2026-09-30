@@ -1,0 +1,50 @@
+{
+  "version": "1",
+  "groupKey": "{alertname=\"High CPU Usage\", service=\"api-gateway\"}",
+  "truncatedAlerts": 0,
+  "orgId": 1,
+  "state": "alerting",
+  "title": "[FIRING:1] High CPU Usage production (api-gateway)",
+  "message": "**Firing**\n\nLabels:\n - alertname = High CPU Usage\n - severity = critical\n - service = api-gateway\n - environment = production\n\nAnnotations:\n - summary = CPU usage is above 90%\n - description = The api-gateway service has been running at 94.5% CPU for the last 5 minutes.\n",
+  "receiver": "webhook-receiver",
+  "status": "firing",
+  "alerts": [
+    {
+      "status": "firing",
+      "labels": {
+        "alertname": "High CPU Usage",
+        "environment": "production",
+        "instance": "node-01.example.com",
+        "service": "api-gateway",
+        "severity": "critical"
+      },
+      "annotations": {
+        "description": "The api-gateway service has been running at 94.5% CPU for the last 5 minutes.",
+        "runbook_url": "https://wiki.example.com/runbooks/high-cpu",
+        "summary": "CPU usage is above 90%"
+      },
+      "startsAt": "2026-06-30T15:20:00Z",
+      "endsAt": "0001-01-01T00:00:00Z",
+      "generatorURL": "https://grafana.example.com/alerting/graph/v2/alert-id-123",
+      "fingerprint": "a3b8c2d4e5f67890",
+      "dashboardURL": "https://grafana.example.com/d/api-monitoring/api-gateway-metrics",
+      "panelURL": "https://grafana.example.com/d/api-monitoring/api-gateway-metrics?viewPanel=2",
+      "orgId": 1
+    }
+  ],
+  "groupLabels": {
+    "alertname": "High CPU Usage",
+    "service": "api-gateway"
+  },
+  "commonLabels": {
+    "alertname": "High CPU Usage",
+    "environment": "production",
+    "service": "api-gateway",
+    "severity": "critical"
+  },
+  "commonAnnotations": {
+    "description": "The api-gateway service has been running at 94.5% CPU for the last 5 minutes.",
+    "summary": "CPU usage is above 90%"
+  },
+  "externalURL": "https://grafana.example.com/"
+}

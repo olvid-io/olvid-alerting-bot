@@ -1,0 +1,66 @@
+{
+  "object_kind": "pipeline",
+  "object_attributes": {
+    "id": 31,
+    "ref": "main",
+    "tag": false,
+    "sha": "a1b2c3d4e5f67890fedcba9876543210abcdef12",
+    "status": "success",
+    "stages": ["build", "test", "deploy"],
+    "created_at": "2026-06-30T15:20:00Z",
+    "finished_at": "2026-06-30T15:25:18Z",
+    "duration": 318,
+    "url": "https://gitlab.example.com/jane-doe/example-repo/-/pipelines/31"
+  },
+  "user": {
+    "name": "Jane Doe",
+    "username": "jane-doe",
+    "email": "owner@example.com"
+  },
+  "project": {
+    "id": 7,
+    "name": "example-repo",
+    "description": "Example repository for webhook notifications",
+    "web_url": "https://gitlab.example.com/jane-doe/example-repo",
+    "namespace": "jane-doe",
+    "path_with_namespace": "jane-doe/example-repo",
+    "default_branch": "main",
+    "visibility_level": 20
+  },
+  "commit": {
+    "id": "a1b2c3d4e5f67890fedcba9876543210abcdef12",
+    "message": "Fix typo in onboarding README",
+    "timestamp": "2026-06-30T15:19:45Z",
+    "url": "https://gitlab.example.com/jane-doe/example-repo/-/commit/a1b2c3d4",
+    "author": {
+      "name": "Jane Doe",
+      "email": "owner@example.com"
+    }
+  },
+  "builds": [
+    {
+      "id": 99,
+      "stage": "build",
+      "name": "compile",
+      "status": "success",
+      "started_at": "2026-06-30T15:20:05Z",
+      "finished_at": "2026-06-30T15:21:30Z"
+    },
+    {
+      "id": 100,
+      "stage": "test",
+      "name": "unit-tests",
+      "status": "success",
+      "started_at": "2026-06-30T15:21:35Z",
+      "finished_at": "2026-06-30T15:23:50Z"
+    },
+    {
+      "id": 101,
+      "stage": "deploy",
+      "name": "deploy-staging",
+      "status": "success",
+      "started_at": "2026-06-30T15:23:55Z",
+      "finished_at": "2026-06-30T15:25:18Z"
+    }
+  ]
+}

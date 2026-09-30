@@ -1,0 +1,195 @@
+{
+  "action": "opened",
+  "number": 42,
+  "pull_request": {
+    "url": "https://api.github.com/repos/jane-doe/example-repo/pulls/42",
+    "id": 279147437,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc5MTQ3NDM3",
+    "html_url": "https://github.com/jane-doe/example-repo/pull/42",
+    "diff_url": "https://github.com/jane-doe/example-repo/pull/42.diff",
+    "patch_url": "https://github.com/jane-doe/example-repo/pull/42.patch",
+    "issue_url": "https://api.github.com/repos/jane-doe/example-repo/issues/42",
+    "number": 42,
+    "state": "open",
+    "locked": false,
+    "title": "Fix typo in onboarding README",
+    "user": {
+      "login": "jane-doe",
+      "id": 1000001,
+      "node_id": "MDQ6VXNlcjEwMDAwMDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1000001?v=4",
+      "url": "https://api.github.com/users/jane-doe",
+      "html_url": "https://github.com/jane-doe",
+      "type": "User",
+      "site_admin": false
+    },
+    "body": "Spotted a small typo in the getting-started section. One-line fix, ready to merge.",
+    "created_at": "2026-06-30T15:20:33Z",
+    "updated_at": "2026-06-30T15:20:33Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "assignee": {
+      "login": "jane-doe",
+      "id": 1000001,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1000001?v=4",
+      "html_url": "https://github.com/jane-doe",
+      "type": "User"
+    },
+    "assignees": [
+      {
+        "login": "jane-doe",
+        "id": 1000001,
+        "avatar_url": "https://avatars.githubusercontent.com/u/1000001?v=4",
+        "html_url": "https://github.com/jane-doe",
+        "type": "User"
+      }
+    ],
+    "requested_reviewers": [
+      {
+        "login": "john-smith",
+        "id": 1000002,
+        "avatar_url": "https://avatars.githubusercontent.com/u/1000002?v=4",
+        "html_url": "https://github.com/john-smith",
+        "type": "User"
+      }
+    ],
+    "requested_teams": [],
+    "labels": [
+      {
+        "id": 1362934389,
+        "node_id": "MDU6TGFiZWwxMzYyOTM0Mzg5",
+        "url": "https://api.github.com/repos/jane-doe/example-repo/labels/documentation",
+        "name": "documentation",
+        "color": "0075ca",
+        "default": true,
+        "description": "Improvements or additions to documentation"
+      }
+    ],
+    "milestone": null,
+    "commits_url": "https://api.github.com/repos/jane-doe/example-repo/pulls/42/commits",
+    "review_comments_url": "https://api.github.com/repos/jane-doe/example-repo/pulls/42/comments",
+    "comments_url": "https://api.github.com/repos/jane-doe/example-repo/issues/42/comments",
+    "statuses_url": "https://api.github.com/repos/jane-doe/example-repo/statuses/ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+    "head": {
+      "label": "jane-doe:fix/readme-typo",
+      "ref": "fix/readme-typo",
+      "sha": "ec26c3e57ca3a959ca5aad62de7213c562f8c821"
+    },
+    "base": {
+      "label": "jane-doe:main",
+      "ref": "main",
+      "sha": "f95f852bd8fca8fcc58a9a2d6c842781e32a215e"
+    },
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/jane-doe/example-repo/pulls/42"
+      },
+      "html": { "href": "https://github.com/jane-doe/example-repo/pull/42" },
+      "issue": {
+        "href": "https://api.github.com/repos/jane-doe/example-repo/issues/42"
+      },
+      "comments": {
+        "href": "https://api.github.com/repos/jane-doe/example-repo/issues/42/comments"
+      },
+      "review_comments": {
+        "href": "https://api.github.com/repos/jane-doe/example-repo/pulls/42/comments"
+      },
+      "commits": {
+        "href": "https://api.github.com/repos/jane-doe/example-repo/pulls/42/commits"
+      },
+      "statuses": {
+        "href": "https://api.github.com/repos/jane-doe/example-repo/statuses/ec26c3e57ca3a959ca5aad62de7213c562f8c821"
+      }
+    },
+    "author_association": "OWNER",
+    "auto_merge": null,
+    "active_lock_reason": null,
+    "draft": false,
+    "merged": false,
+    "mergeable": true,
+    "rebaseable": true,
+    "mergeable_state": "clean",
+    "merged_by": null,
+    "comments": 0,
+    "review_comments": 1,
+    "maintainer_can_modify": false,
+    "commits": 1,
+    "additions": 3,
+    "deletions": 1,
+    "changed_files": 1
+  },
+  "repository": {
+    "id": 100000001,
+    "node_id": "MDEwOlJlcG9zaXRvcnkxMDAwMDAwMDE=",
+    "name": "example-repo",
+    "full_name": "jane-doe/example-repo",
+    "private": false,
+    "owner": {
+      "login": "jane-doe",
+      "id": 1000001,
+      "node_id": "MDQ6VXNlcjEwMDAwMDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1000001?v=4",
+      "url": "https://api.github.com/users/jane-doe",
+      "html_url": "https://github.com/jane-doe",
+      "type": "User",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/jane-doe/example-repo",
+    "description": "Example repository for webhook notifications",
+    "fork": false,
+    "url": "https://api.github.com/repos/jane-doe/example-repo",
+    "forks_url": "https://api.github.com/repos/jane-doe/example-repo/forks",
+    "hooks_url": "https://api.github.com/repos/jane-doe/example-repo/hooks",
+    "issue_events_url": "https://api.github.com/repos/jane-doe/example-repo/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/jane-doe/example-repo/events",
+    "branches_url": "https://api.github.com/repos/jane-doe/example-repo/branches{/branch}",
+    "commits_url": "https://api.github.com/repos/jane-doe/example-repo/commits{/sha}",
+    "contents_url": "https://api.github.com/repos/jane-doe/example-repo/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/jane-doe/example-repo/compare/{base}...{head}",
+    "issues_url": "https://api.github.com/repos/jane-doe/example-repo/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/jane-doe/example-repo/pulls{/number}",
+    "labels_url": "https://api.github.com/repos/jane-doe/example-repo/labels{/name}",
+    "releases_url": "https://api.github.com/repos/jane-doe/example-repo/releases{/id}",
+    "created_at": "2026-05-15T15:19:25Z",
+    "updated_at": "2026-06-29T15:19:27Z",
+    "pushed_at": "2026-06-30T15:20:32Z",
+    "git_url": "git://github.com/jane-doe/example-repo.git",
+    "ssh_url": "git@github.com:jane-doe/example-repo.git",
+    "clone_url": "https://github.com/jane-doe/example-repo.git",
+    "svn_url": "https://github.com/jane-doe/example-repo",
+    "homepage": null,
+    "size": 412,
+    "stargazers_count": 12,
+    "watchers_count": 12,
+    "language": "TypeScript",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "forks_count": 1,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 2,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "default_branch": "main",
+    "topics": ["example", "demo"],
+    "visibility": "public"
+  },
+  "sender": {
+    "login": "jane-doe",
+    "id": 1000001,
+    "node_id": "MDQ6VXNlcjEwMDAwMDE=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1000001?v=4",
+    "url": "https://api.github.com/users/jane-doe",
+    "html_url": "https://github.com/jane-doe",
+    "type": "User",
+    "site_admin": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "action": "completed",
+  "workflow_run": {
+    "id": 8123456789,
+    "name": "CI",
+    "head_branch": "main",
+    "head_sha": "abc123def4567890",
+    "status": "completed",
+    "conclusion": "failure",
+    "run_number": 247,
+    "event": "push",
+    "html_url": "https://github.com/jane-doe/example-repo/actions/runs/8123456789",
+    "actor": {
+      "login": "jane-doe"
+    }
+  },
+  "repository": {
+    "name": "example-repo",
+    "full_name": "jane-doe/example-repo",
+    "html_url": "https://github.com/jane-doe/example-repo"
+  }
+}

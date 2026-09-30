@@ -1,0 +1,54 @@
+services:
+  # The Alerting Bot web app (UI + HTTP API + polling heartbeat).
+  # Bind to 0.0.0.0:3000 by default so the app is reachable from the LAN;
+  # put a reverse proxy (Caddy/nginx) in front of this for TLS + a public
+  # hostname before exposing it to the internet.
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: alerting-bot-app
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=file:/data/alerting.db
+      - OLVID_DAEMON_URL=http://daemon:50051
+    env_file:
+      - .env
+    volumes:
+      - alerting_db:/data
+    depends_on:
+      - daemon
+    restart: unless-stopped
+    deploy:                                     
+      resources:
+        limits: { cpus: "1.0", memory: 512M }
+
+
+  # 2. Olvid Daemon (link to olvid environment)
+  daemon:
+    image: olvid/bot-daemon:2.0.1
+    env_file:
+      - .env
+    ports:
+      - 50051:50051
+    volumes:
+      - ./data:/daemon/data
+      - ./data/app_configuration.properties:/opt/conf/app_configuration.properties
+  # 3. Olvid CLI. Used to pair the daemon with discussions and manage olvid Client
+  cli:
+    image: olvid/bot-python-runner:2.0.1
+    entrypoint: "olvid-cli"
+    env_file:
+      - .env
+    environment:
+      - OLVID_DAEMON_URL=http://daemon:50051
+    stdin_open: true
+    tty: true
+    profiles: ["cli"]
+
+# Named volumes. Managed by Docker under /var/lib/docker/volumes on Linux
+# (or inside the WSL2 VM on Windows). Survives `docker compose down`;
+# only `docker compose down -v` removes it.
+volumes:
+  alerting_db:

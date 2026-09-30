@@ -1,0 +1,225 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* ── Empty state ────────────────────────────────────────────────────────── */
+.logs-empty {
+    padding: var(--space-6) var(--space-4);
+    color: var(--color-text-faint);
+    font-size: var(--text-m);
+    font-style: italic;
+    text-align: center;
+    background: var(--color-bg-card);
+    border: 1px dashed var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+}
+
+/* ── List ───────────────────────────────────────────────────────────────── */
+.logs-list-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: var(--space-2);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    flex: 1;
+    overflow-y: hidden;
+}
+
+.logs-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    min-height: 0;
+    flex: 1;
+    padding: 0;
+    margin-top: 0;
+}
+
+/* ── Filters ────────────────────────────────────────────────────────────── */
+.logs-filter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    padding: var(--space-2);
+}
+
+.logs-filter-button {
+    flex: 1;
+    background-color: var(--color-bg-input);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    height: 32px;
+    padding: var(--space-2);
+
+    font-family: inherit;
+    cursor: pointer;
+    transition:
+            border-color 0.15s,
+            box-shadow 0.15s,
+            background-color 0.15s;
+}
+
+.logs-filter-button:hover {
+    border-color: var(--color-accent);
+}
+
+.logs-filter-button-clicked {
+    border-color: var(--color-accent);
+    color: var(--color-accent-text);
+}
+
+/* ── Row ────────────────────────────────────────────────────────────────── */
+.log-row {
+    display: grid;
+    grid-template-columns: 10px 10px 1fr auto;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 4px var(--space-4);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-s);
+    transition: background-color 0.12s ease;
+}
+.log-row:hover {
+    background: var(--color-bg-card-soft);
+}
+.log-row.is-expanded {
+    background: var(--color-bg-card-soft);
+}
+
+.log-chevron,
+.log-chevron-placeholder {
+    width: 16px;
+    height: 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-chevron {
+    appearance: none;
+    background: transparent;
+    border: 0;
+
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.log-chevron:hover {
+    color: var(--color-text-primary);
+}
+
+.chevron-icon {
+    color: var(--color-text-dim)
+}
+.log-row.is-expanded .chevron-icon {
+    transform: rotate(90deg);
+    color: var(--color-text-muted);
+}
+
+/* ── Status dot ─────────────────────────────────────────────────────────── */
+.log-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    justify-self: center;
+}
+.dot-success {
+    background: var(--color-success, #22c55e);
+}
+.dot-warning {
+    background: var(--color-warning, #f59e0b);
+}
+.dot-error {
+    background: var(--color-danger, #ef4444);
+}
+
+/* ── Timestamp + state ──────────────────────────────────────────────────── */
+.log-time {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-dim);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+.log-state {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    justify-self: end;
+}
+.log-success .log-state {
+    color: var(--color-text-faint);
+}
+.log-warning .log-state {
+    color: var(--color-warning-text, #b45309);
+}
+.log-error .log-state {
+    color: var(--color-danger-text, #b91c1c);
+}
+
+
+/* ── Expanded detail ────────────────────────────────────────────────────── */
+.log-details {
+    grid-column: 1 / -1;
+    margin-top: var(--space-2);
+    padding: var(--space-3);
+    background: var(--color-bg-input);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--color-border-default);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+.log-warning .log-details {
+    border-left-color: var(--color-warning, #f59e0b);
+}
+.log-error .log-details {
+    border-left-color: var(--color-danger, #ef4444);
+}
+
+.log-detail-line {
+    margin: 0;
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+}
+.log-detail-key {
+    color: var(--color-text-muted);
+    margin-right: var(--space-1);
+}
+.log-detail-value {
+    font-family: var(--font-mono);
+    color: var(--color-text-primary);
+}
+.log-error {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.4;
+}

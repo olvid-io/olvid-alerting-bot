@@ -1,0 +1,295 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/*
+Theme switch handled by in app/plugins/theme.client.ts
+*/
+
+:root {
+  color-scheme: dark;
+
+  /* ──────────────────────────────────────────────────────────────
+   *  PRIMITIVES — Blue brand ladder 
+   * ────────────────────────────────────────────────────────────── */
+  --blue-10: #eaf0fe;
+  --blue-20: #d5e0fd;
+  --blue-30: #acc1fb;
+  --blue-40: #82a3f9;
+  --blue-50: #4375f6;
+  --blue-60: #2f65f5;
+  --blue-70: #2651c4;
+  --blue-80: #1c3d90;
+  --blue-90: #132862;
+  --blue-dark:#161c2e;
+
+  /* ──────────────────────────────────────────────────────────────
+   *  PRIMITIVES — Neutrals.
+   * ────────────────────────────────────────────────────────────── */
+  --neutral-10: #f8fafc;
+  --neutral-20: #f1f5f9;
+  --neutral-25: #e2e8f0;
+  --neutral-30: #cdd3df;
+  --neutral-40: #94a3b8;
+  --neutral-50: #64748b;
+  --neutral-60: #475569;
+  --neutral-70: #334155;
+  --neutral-80: #272c36; /* menus, strong borders */
+  --neutral-83: #262a31; /* alt: hover / bundle-card variant */
+  --neutral-85: #1f222b; /* inputs, card-soft (wcard-head) */
+  --neutral-90: #15181e; /* nav, cards, sidebar-head, panels — same tone as nav on purpose */
+  --neutral-95: #0f1115; /* app / page — deepest */
+
+  --white: #ffffff;
+  --black: #000000;
+
+  /* ──────────────────────────────────────────────────────────────
+   *  SEMANTIC — Dark theme mapping.
+   * ────────────────────────────────────────────────────────────── */
+
+  /* Surfaces */
+  --color-bg-app: var(--neutral-95);
+  --color-bg-input: var(
+    --black
+  ); 
+  --color-bg-nav: var(--neutral-85);
+  --color-bg-sidebar-head: var(--neutral-85); /* was 85*/
+  --color-bg-sidebar: var(--neutral-90);
+  --color-bg-panel: var(--neutral-90);
+
+  --color-bg-card: var(--neutral-85);
+  --color-bundle-card: var(--neutral-80);
+  --color-bg-card-soft: var(--neutral-80);
+  --color-bg-card-selected:#222b42;
+  --color-bg-menu: var(--neutral-80);
+
+  /* Text */
+  --color-text-on-accent: var(--white);
+  --color-text-primary: var(--neutral-10);
+  --color-text-secondary: var(--neutral-30);
+  --color-text-muted: var(--neutral-40);
+  --color-text-dim: var(--neutral-50);
+  --color-text-faint: var(--neutral-60);
+
+  /* Borders */
+  --color-border-subtle: var(--neutral-85); /* matches `bg-card-soft` */
+  --color-border-default: var(--neutral-80);
+  --color-border-strong: var(--neutral-70);
+
+  /* Accent — the actionable blue. `soft`/`border`/`text` form the
+   * "colored surface" trio used by chips, info boxes, focus rings. */
+  --color-accent: var(--blue-60);
+  --color-accent-hover: var(--blue-70);
+  --color-accent-soft: #182236; /* dark-blue tinted surface */
+  --color-accent-border: var(--blue-80);
+  --color-accent-text: var(--blue-30); /* legible on --accent-soft */
+
+  /* Code blocks (special-purpose, kept out of the elevation scale so
+   * they always look like an embedded IDE surface) */
+
+  /*--color-bg-code: #121213;
+  --color-bg-code-header: #19191b;
+  */
+  --color-bg-code-header: var(--neutral-95);
+  --color-bg-code: var(--black);
+  --color-bg-code-soft: var(--black);
+  --color-text-code: #d4d4d4;
+  --color-border-code: var(--neutral-90);
+  --color-text-url: #80e0e4; /* informational sky blue */
+
+  /* Syntax colors — palette used by the JSON/XML tree previews and,
+   * over time, any code-highlighting surface. VS Code "Dark+" inspired
+   * so the payload trees read like an embedded IDE. Themed in a single
+   * place so a future light-mode fix or accessibility pass touches one
+   * file, not every tree node. */
+  --color-syntax-punct: var(--color-text-faint);
+  --color-syntax-key: #9cdcfe;
+  --color-syntax-string: #ce9178;
+  --color-syntax-number: #b5cea8;
+  --color-syntax-boolean: #569cd6;
+  --color-syntax-null: #569cd6;
+  --color-syntax-summary: #808080;
+  --color-syntax-tag: #60a5fa;
+  --color-syntax-attr-name: #f472b6;
+  --color-syntax-attr-value: blanchedalmond;
+  --color-syntax-text: #ffffff;
+
+
+  /* Status — categorical, unchanged from before */
+  --color-success: #22c55e;
+  --color-success-text: #4ade80;
+  --color-success-soft: #06270f;
+  --color-success-border: #166534;
+  --color-success-bright: #bbf7d0;
+
+  --color-warning: #f59e0b;
+  --color-warning-text: #fbbf24;
+  --color-warning-soft: #422006;
+  --color-warning-border: #92400e;
+  --color-warning-bright: #fde68a;
+
+  --color-danger: #ef4444;
+  --color-danger-text: #fca5a5;
+  --color-danger-soft: #1a0a0a;
+  --color-danger-border: #7f1d1d;
+  --color-danger-bright: #fecaca;
+  --color-danger-strong: #dc2626;
+
+  /* Overlays */
+  --color-overlay: rgba(0, 0, 0, 0.55);
+
+  /* ──────────────────────────────────────────────────────────────
+   *  PRIMITIVES — Non-color
+   * ────────────────────────────────────────────────────────────── */
+
+  /* Radii — tight, dev-tool feel.
+   * `2xl` and `3xl` are the "expressive" tiers: cards / bubbles that
+   * want to feel physical (chat bubbles, mail cards) reach for them.
+   * Everything else stays on the sm..xl scale. */
+  --radius-sm: 4px;
+  --radius-md: 5px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-2xl: 12px;
+  --radius-3xl: 16px;
+  --radius-pill: 999px;
+
+  /* Spacing scale — 4px base, tight steps up to 24px. */
+  --space-1: 4px;
+  --space-2: 6px;
+  --space-3: 8px;
+  --space-4: 12px;
+  --space-5: 14px;
+  --space-6: 16px;
+  --space-7: 20px;
+  --space-8: 24px;
+
+  /* Typography — system stacks (fast + native feel).
+   * The mono stack prefers modern coding fonts if the OS has them; if
+   * you install  */
+  --font-sans: Arial, Helvetica, Roboto;
+  --font-mono: "Consolas",  monospace,  "Courier New";
+
+  /* Font sizes — small by design (tech-tool density). `lg` is the new
+   * reading step used by preview bodies and long-form fields. */
+  --text-xs: 10px;
+  --text-s: 11px;
+  --text-m: 12px;
+  --text-base: 13px;
+  --text-lg: 15px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+
+  /* Font weights — one alias per intent, no numeric literals scattered
+   * across component CSS. */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Shadows — quiet by default; overlays stack heavier. */
+  --shadow-card: 0 9px 16px rgba(0, 0, 0, 0.15), 0 1px 10px rgba(0, 0, 0, 0.10);
+  --shadow-overlay: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+ *  LIGHT theme — semantic mapping only. Primitives are shared with
+ *  dark (blues, grays); 
+ * ────────────────────────────────────────────────────────────────── */
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Surfaces — the panell steps DOWN from white to a soft slate so
+   * white cards elevate visibly against it. Same elevation direction
+   * as dark theme (panell darker than card). Inputs stay white and
+   * rely on their border to define the slot. */
+  --color-bg-app: var(--neutral-20); /* soft slate page */
+  --color-bg-input: var(--white); /* border defines the slot */
+  --color-bg-nav: var(--neutral-25); /* nav pops from the page */
+  --color-bg-sidebar-head: var(--neutral-25);
+  --color-bg-panel: var(--neutral-10); /* off-white so cards lift */
+  
+  --color-bg-card: var(--white);
+  --color-bundle-card: var(--white);
+  --color-bg-card-soft: var(--neutral-25); /* wcard-head, hover strips */
+   --color-bg-card-selected: var(--blue-10);
+  --color-bg-menu: var(--white);
+
+  /* Text */
+  --color-text-primary: var(--neutral-95);
+  --color-text-secondary: var(--neutral-80);
+  --color-text-muted: var(--neutral-60);
+  --color-text-dim: var(--neutral-50);
+  --color-text-faint: var(--neutral-40);
+  --color-text-on-accent: var(--white);
+
+  /* Borders — subtle is neutral-25 so cards get a visible outline
+   * against the grey app; default/strong stay in the greyer mid-scale. */
+  --color-bg-code: var(--neutral-83);
+  --color-border-subtle: var(--neutral-25);
+  --color-border-default: var(--neutral-30);
+  --color-border-strong: var(--neutral-40);
+  --color-border-code: var(--neutral-25);
+
+  /* Accent — same brand hue, but the soft trio switches to a light
+   * tinted background with darker text. */
+  --color-accent: var(--blue-60);
+  --color-accent-hover: var(--blue-70);
+  --color-accent-soft: var(--blue-10);
+  --color-accent-border: var(--blue-30);
+  --color-accent-text: var(--blue-70);
+
+  /* Softer scrim on light backgrounds. */
+  --color-overlay: rgba(15, 23, 42, 0.35);
+
+  /* Status-soft tints — light backgrounds keep colored borders legible. */
+  --color-success-soft: #dcfce7;
+  --color-warning-soft: #fef3c7;
+  --color-danger-soft: #fee2e2;
+
+  /* Status text — dark-on-light for legibility on the soft tints. */
+  --color-success-text: #15803d;
+  --color-success-bright: #166534;
+  --color-warning-text: #b45309;
+  --color-warning-bright: #92400e;
+  --color-danger-text: #b91c1c;
+  --color-danger-bright: #991b1b;
+
+  /* Code blocks stay dark — they read as embedded IDE panels. */
+}
+
+/* ──────────────────────────────────────────────────────────────────
+ *  ARCHIVE — "Cool dark mode" ? TODO
+ *
+ *  A blue-tinted dark palette we tried before switching the default
+ *  dark neutrals to a pure grey. Kept here as a ready-to-swap
+ *  alternative — drop these back into the :root neutrals block to
+ *  restore the arctic feel, no other changes required.
+ *
+ *  --neutral-10: #f8fafc;
+ *  --neutral-20: #f1f5f9;
+ *  --neutral-25: #e2e8f0;
+ *  --neutral-30: #cbd5e1;
+ *  --neutral-40: #94a3b8;
+ *  --neutral-50: #64748b;
+ *  --neutral-60: #475569;
+ *  --neutral-70: #334155;
+ *  --neutral-80: #1e290b;
+ *  --neutral-85: #17223a;
+ *  --neutral-90: #0f172a;
+ *  --neutral-90: #0a1122;
+ *  --neutral-95: #020617;
+ * ────────────────────────────────────────────────────────────────── */

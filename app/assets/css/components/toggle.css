@@ -1,0 +1,54 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* ── Active/inactive toggle ─────────────────────── */
+.toggle-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.toggle {
+    width: 34px;
+    height: 18px;
+    border-radius: 9px;
+    background: var(--color-border-default);
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 0;
+}
+.toggle.on {
+    background: var(--color-accent);
+}
+.toggle:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+.knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-text-on-accent);
+    transition: transform 0.2s;
+}
+.toggle.on .knob {
+    transform: translateX(16px);
+}

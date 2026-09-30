@@ -1,0 +1,137 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+.login-form,
+.forgot-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+}
+
+.login-form-title {
+    display: flex;
+    justify-content: center;
+    font-size: var(--text-2xl);
+    margin: 0 0 var(--space-4) 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--color-text-primary);
+    font-weight: 700;
+
+}
+
+.forgot-hint {
+    margin-top: var(--space-3);
+}
+
+.forgot-submit {
+    align-self: center;
+    min-width: 180px;
+}
+
+.msg {
+    margin-top: var(--space-3);
+    font-size: var(--text-s);
+    color: var(--color-text-muted);
+}
+
+.msg--error {
+    color: var(--color-danger);
+}
+
+.msg--muted {
+    color: var(--color-text-faint);
+}
+
+.msg--success {
+    color: var(--color-success-text, var(--color-success));
+}
+
+.forgot-outcome {
+    text-align: center;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: var(--text-s);
+}
+
+.link-btn:hover {
+    color: var(--color-accent-hover);
+}
+
+.forgot-link-row {
+    margin-top: var(--space-4);
+    display: flex;
+    justify-content: center;
+}
+
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-login-form {
+    height: 120px;
+    margin-top: 0;
+}
+
+.login-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: var(--text-xl);
+    color: var(--color-text-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    padding: 0 0 var(--space-4) 0;
+}
+
+.login-olvid-info {
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    padding: var(--space-3);
+
+    font-size: var(--text-m);
+
+    background-color: var(--color-bg-card-soft);
+    color: var(--color-text-muted);
+}
+
+.login-olvid-info.sent {
+    border-color: var(--color-accent-border);
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent-text);
+}
+
+.login-olvid-info.error {
+    background-color: var(--color-danger-soft);
+    color: var(--color-danger-text);
+    border-color: var(--color-danger-border);
+}
+
+.login-box-top {
+    margin-top: var(--space-4);
+}

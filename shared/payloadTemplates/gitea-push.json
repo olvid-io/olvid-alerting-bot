@@ -1,0 +1,95 @@
+{
+  "ref": "refs/heads/main",
+  "before": "6113728f27ae82c7b1a177c8d03f9e96e0adf246",
+  "after": "ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+  "compare_url": "https://git.example.com/jane-doe/example-repo/compare/6113728f27ae82c7b1a177c8d03f9e96e0adf246...ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+  "commits": [
+    {
+      "id": "ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+      "message": "Fix typo in onboarding README\n",
+      "url": "https://git.example.com/jane-doe/example-repo/commit/ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+      "author": {
+        "name": "Jane Doe",
+        "email": "owner@example.com",
+        "username": "jane-doe"
+      },
+      "committer": {
+        "name": "Jane Doe",
+        "email": "owner@example.com",
+        "username": "jane-doe"
+      },
+      "verification": null,
+      "timestamp": "2026-06-30T15:20:32Z",
+      "added": [],
+      "removed": [],
+      "modified": ["docs/getting-started.md"]
+    }
+  ],
+  "total_commits": 1,
+  "head_commit": {
+    "id": "ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+    "message": "Fix typo in onboarding README\n",
+    "url": "https://git.example.com/jane-doe/example-repo/commit/ec26c3e57ca3a959ca5aad62de7213c562f8c821",
+    "author": {
+      "name": "Jane Doe",
+      "email": "owner@example.com",
+      "username": "jane-doe"
+    },
+    "committer": {
+      "name": "Jane Doe",
+      "email": "owner@example.com",
+      "username": "jane-doe"
+    },
+    "verification": null,
+    "timestamp": "2026-06-30T15:20:32Z",
+    "added": [],
+    "removed": [],
+    "modified": ["docs/getting-started.md"]
+  },
+  "repository": {
+    "id": 12,
+    "owner": {
+      "id": 1,
+      "login": "jane-doe",
+      "full_name": "Jane Doe",
+      "email": "owner@example.com",
+      "avatar_url": "https://git.example.com/avatars/00000000000000000000000000000001",
+      "username": "jane-doe"
+    },
+    "name": "example-repo",
+    "full_name": "jane-doe/example-repo",
+    "description": "Example repository for webhook notifications",
+    "empty": false,
+    "private": false,
+    "fork": false,
+    "mirror": false,
+    "html_url": "https://git.example.com/jane-doe/example-repo",
+    "ssh_url": "git@git.example.com:jane-doe/example-repo.git",
+    "clone_url": "https://git.example.com/jane-doe/example-repo.git",
+    "website": "",
+    "stars_count": 12,
+    "forks_count": 1,
+    "watchers_count": 2,
+    "open_issues_count": 2,
+    "default_branch": "main",
+    "archived": false,
+    "created_at": "2026-05-15T15:19:25Z",
+    "updated_at": "2026-06-30T15:20:32Z"
+  },
+  "pusher": {
+    "id": 1,
+    "login": "jane-doe",
+    "full_name": "Jane Doe",
+    "email": "owner@example.com",
+    "avatar_url": "https://git.example.com/avatars/00000000000000000000000000000001",
+    "username": "jane-doe"
+  },
+  "sender": {
+    "id": 1,
+    "login": "jane-doe",
+    "full_name": "Jane Doe",
+    "email": "owner@example.com",
+    "avatar_url": "https://git.example.com/avatars/00000000000000000000000000000001",
+    "username": "jane-doe"
+  }
+}

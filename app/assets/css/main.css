@@ -1,0 +1,41 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Single entry imported from nuxt.config. Order matters:
+ * tokens FIRST (every other sheet uses the variables),
+ * reset SECOND (depends on tokens),
+ * components LAST.
+ */
+
+@import "./tokens.css";
+@import "./reset.css";
+@import "./components/alert-view.css";
+@import "./components/button.css";
+@import "./components/chip.css";
+@import "./components/code-block.css";
+@import "./components/input.css";
+@import "./components/overlay.css";
+@import "./components/panel.css";
+@import "./components/preview-strip.css";
+@import "./components/scrollbar.css";
+@import "./components/table.css";
+@import "./components/wcard.css";
+@import "./components/status-dot.css";
+@import "./components/log.css";
+@import "./components/auth.css";
+@import "./components/toggle.css";

@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id                   Int                 @id @default(autoincrement())
+  login                String              @unique
+  email                String?             @unique
+  passwordHash         String?
+  name                 String?
+  role                 String              @default("user")
+  activatedAt          DateTime?
+  olvidDiscussionId    BigInt?
+  inviteOlvidMessageId BigInt?
+  passwordLogin        Boolean             @default(false)
+  olvidLogin           Boolean             @default(false)
+  createdAt            DateTime            @default(now())
+  updatedAt            DateTime            @updatedAt
+  tokens               VerificationToken[]
+}
+
+model VerificationToken {
+  id        Int       @id @default(autoincrement())
+  tokenHash String    @unique
+  userId    Int
+  purpose   String
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, purpose])
+}
+
+model AlertTable {
+  id                Int                @id @default(autoincrement())
+  title             String
+  description       String?
+  input             String?
+  status            String             @default("draft")
+  token             String?            @unique @default(uuid())
+  createdAt         DateTime           @default(now())
+  alertParams       Json?
+  logs              AlertLog[]
+  bundles           Bundle[]
+  lastPayload       LastAlertPayload?
+  lastFailedPayload LastFailedPayload?
+}
+
+model Bundle {
+  id            Int            @id @default(autoincrement())
+  name          String?
+  alertId       Int
+  formating     String         @default("Unformatted")
+  custom_script String?
+  createdAt     DateTime       @default(now())
+  mailSubject   String?
+  alert         AlertTable     @relation(fields: [alertId], references: [id], onDelete: Cascade)
+  outputs       BundleOutput[]
+}
+
+model BundleOutput {
+  id        Int      @id @default(autoincrement())
+  bundleId  Int
+  type      String
+  params    Json
+  createdAt DateTime @default(now())
+  bundle    Bundle   @relation(fields: [bundleId], references: [id], onDelete: Cascade)
+
+  @@index([bundleId])
+}
+
+model LastAlertPayload {
+  alertId    Int        @id @default(autoincrement())
+  payload    Json
+  receivedAt DateTime   @updatedAt
+  alert      AlertTable @relation(fields: [alertId], references: [id], onDelete: Cascade)
+}
+
+model LastFailedPayload {
+  alertId  Int        @id @default(autoincrement())
+  raw      String?
+  parsed   Json?
+  error    String
+  stage    String?
+  failedAt DateTime   @updatedAt
+  alert    AlertTable @relation(fields: [alertId], references: [id], onDelete: Cascade)
+}
+
+/// One-to-many events log per alert. Every poll (success or failure) inserts
+/// one row; the heartbeat's failure branches populate `error` with a
+/// human-readable message. The 200-row cap per alertId is enforced in
+/// `alertLogRepository.insert` — no DB trigger needed.
+model AlertLog {
+  id        Int        @id @default(autoincrement())
+  alertId   Int
+  status    String
+  error     String?
+  details   Json?
+  createdAt DateTime   @default(now())
+  alert     AlertTable @relation(fields: [alertId], references: [id], onDelete: Cascade)
+
+  @@index([alertId, createdAt(sort: Desc)])
+}
+
+model LoginSettings {
+  id            Int     @id @default(autoincrement())
+  custom_script String?
+}

@@ -1,0 +1,947 @@
+{
+  "topNav": {
+    "title": "Bot d'alerting",
+    "daemonIsUp": "Connecté au démon Olvid",
+    "daemonIsDown": "Non connecté au démon Olvid",
+    "photoAlt": "Photo de profil du bot",
+    "nameAlt": "Bot d'alerting",
+    "themeToggle": "Changer le thème",
+    "languageToggle": "Changer la langue",
+    "users": "Utilisateurs",
+    "login": "Connexion"
+  },
+
+  "accountMenu": {
+    "account": "Compte",
+    "login": "Login",
+    "email": "E-mail",
+    "role": "Rôle",
+    "logout": "Déconnexion"
+  },
+
+  "index": {
+    "placeholder": "Sélectionnez une alerte dans la liste, ou créez-en une nouvelle."
+  },
+
+  "sidebar": {
+    "title": "Liste d'alertes",
+    "empty": "Aucune alerte pour le moment",
+    "loginPrompt": "Connectez-vous pour voir vos alertes",
+    "searchPlaceholder": "Filtrer les alertes...",
+    "statusLabel": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "draft": "Brouillon"
+    }
+  },
+
+  "user": { 
+    "pageTitle": "Utilisateurs",
+    "userRow" :{
+      "status": {
+        "registered": "Enregistré",
+        "pending": "En attente de validation"
+      },
+      "role" : {
+        "admin": "Admin",
+        "user" : "User"
+      }
+    },
+    "invitation" :{
+      "send": "Envoyer une invitation"
+    }
+  },
+
+  "alertStatus": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "draft": "Brouillon"
+  },
+
+  "alertPage": {
+    "loading": "Chargement…",
+    "notFound": "Alerte introuvable."
+  },
+
+  "common": {
+    "untitled": "Sans titre",
+    "untitledAlert": "Alerte sans titre...",
+    "descriptionPlaceholder": "Ajouter une brève description…",
+    "unknownError": "Erreur inconnue",
+    "loadingEllipsis": "Chargement…",
+    "emDash": "—",
+    "via": "via",
+    "saving": "Enregistrement…",
+    "deleting": "Suppression…",
+    "polling": "Interrogation…",
+    "fieldRequired": "*"
+  },
+
+  "button": {
+    "saveAlert": "Enregistrer l'alerte",
+    "saveAsDraft": "Enregistrer en brouillon",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "ok": "OK",
+    "newAlert": "Nouvelle alerte",
+    "backToList": "Retour à l'alerte",
+    "back": "Retour",
+    "continue": "Continuer",
+    "editAlert": "Modifier",
+    "close": "Fermer",
+    "done": "Terminé",
+    "discard": "Abandonner",
+    "keepEditing": "Continuer l'édition",
+    "continueEditing": "Continuer l'édition",
+    "saveBundle": "Enregistrer le bundle",
+    "manageUsers": "Utilisateurs"
+  },
+
+  "selector": {
+    "change": "Changer",
+    "noResults": "Aucun résultat trouvé"
+  },
+
+  "wizard": {
+    "alertTitleAria": "Titre de l'alerte",
+    "alertDescriptionAria": "Description de l'alerte",
+
+    "discardModal": {
+      "title": "Modifications non enregistrées",
+      "message": "Si vous quittez maintenant, votre progression sera perdue. Souhaitez-vous garder le progrès avant de partir?"
+    },
+
+    "deleteModal": {
+      "title": "Supprimer cette alerte ?",
+      "message": "Cela supprime l'alerte et tous ses bundles. Cette action est irréversible."
+    },
+
+    "steps": {
+      "general": {
+        "title": "Général",
+        "descriptionPolling": "Titre, source et config. de polling",
+        "descriptionWebhook": "Titre et source"
+      },
+      "trigger": {
+        "title": "Déclencheur",
+        "description": "Quand déclencher"
+      },
+      "bundle": {
+        "title": "Bundles",
+        "description": "Ajouter des cibles de notification"
+      }
+    },
+
+    "fieldLabels": {
+      "generalInfo": "Information générale",
+      "title": "Titre",
+      "description": "Description",
+      "inputSource": "Source d'entrée",
+      "pollingConfiguration": "Configuration du polling",
+      "monitorConfiguration": "Configuration du monitoring"
+    },
+    "communicationHint": "Communication : comment cette source communique avec le système d'alerte.",
+
+    "webhookInfo": {
+      "title": "URL Webhook",
+      "body": " utilise un webhook. Rien d'autre à configurer ici — une URL unique sera générée à l'enregistrement de l'alerte, vous pourrez la coller dans les paramètres de webhook sortant de la source. L'URL apparaîtra sur la page de visualisation de l'alerte après l'enregistrement."
+    },
+
+    "bundleStep": {
+      "intro": "Un {bundle} est une cible de notification : un ensemble de discussions et un format de message.",
+      "bundleWord": "bundle",
+      "startAdding": "Commencer à ajouter des bundles",
+      "newBundle": "Nouveau bundle",
+      "warnHint": "⚠ Certains bundles n'ont aucune discussion sélectionnée — cette alerte sera enregistrée en {draft} tant que chaque bundle ne contient pas au moins une discussion.",
+      "draftWord": "brouillon"
+    },
+
+    "footer": {
+      "saveAlert": "Enregistrer l'alerte",
+      "saveAsDraft": "Enregistrer le brouillon",
+      "saveAlertTitle": "Enregistrer l'alerte et revenir au mode visualisation",
+      "saveAsDraftTitle": "Enregistrer le brouillon et revenir au mode visualisation",
+      "saveAsDraftNoTitle": "Ajouter un titre pour enregistrer",
+      "configureTrigger": "Configurer le déclencheur",
+      "addBundles": "Ajouter des bundles"
+    },
+
+    "validation": {
+      "titleMandatory": "Le titre est obligatoire"
+    },
+
+    "errors": {
+      "saving": "Erreur lors de l'enregistrement de l'alerte :",
+      "deleting": "Erreur lors de la suppression de l'alerte :"
+    },
+
+    "triggerMode": {
+      "fieldLabel": "Mode de déclenchement",
+      "labels": {
+        "every-time": "À chaque fois",
+        "one-shot": "Une fois",
+        "with-recovery": "Une fois + à la récupération"
+      },
+      "hints": {
+        "polling": {
+          "every-time": "Déclenche à chaque scrutation tant que la condition est vraie.",
+          "one-shot": "Déclenche uniquement à la première scrutation où la condition devient vraie.",
+          "with-recovery": "Déclenche une fois, puis à nouveau quand la condition n'est plus vraie."
+        },
+        "monitoring": {
+          "every-time": "Déclenche à chaque scrutation où le statut correspond.",
+          "one-shot": "Déclenche uniquement la première fois que le statut correspond (transition vers l'état correspondant).",
+          "with-recovery": "Déclenche une fois, puis à nouveau quand le statut ne correspond plus (récupération)."
+        }
+      }
+    },
+
+    "firingBehavior": {
+      "title": "Comportement au déclenchement",
+      "triggerModeLabel": "Mode de déclenchement",
+      "datapointsLabel": "Points de données",
+      "datapointsSentence": "Déclencher après que {n} des {m} dernières évaluations correspondent.",
+      "datapointsHint": "Réduit les fausses alertes en attendant des confirmations consécutives. Par défaut 1 sur 1 (déclenche immédiatement)."
+    }
+  },
+
+  "editor": {
+    "header": {
+      "editAlert": "Modifier"
+    },
+    "view": {
+      "fields": {
+        "source": "Source",
+        "endpoint": "Endpoint",
+        "url": "URL",
+        "polling": "Polling",
+        "condition": "Condition",
+        "discussions": "Discussions",
+        "format": "Format",
+        "trigger": "Déclencheur"
+      },
+      "dividers": {
+        "triggerConfiguration": "Configuration du déclencheur",
+        "bundles": "Bundles ({count})",
+        "testPolling": "Tester le polling",
+        "messagesPerBundle": "Messages par bundle"
+      },
+      "noBundles": "Aucun bundle configuré. Cliquez sur {editAlert} pour en ajouter un.",
+      "noBundlesEditAlert": "Modifier",
+      "bundleTag": "BUNDLE {n}",
+      "bundleEdit": "Modifier",
+      "discussionsEmpty": "— aucune —",
+      "eyebrowConfiguration": "Configuration",
+      "eyebrowBundles": "Bundles",
+      "inputTitle": {
+        "polling": "Alerte de polling",
+        "monitoring": "Alerte de monitoring",
+        "webhook": "Alerte webhook",
+        "generic": "Alerte {input}"
+      }
+    },
+
+    "schedule": {
+      "interval": {
+        "everyDay": "Tous les {n} jour",
+        "everyDays": "Tous les {n} jours",
+        "everyHour": "Toutes les {n} heure",
+        "everyHours": "Toutes les {n} heures",
+        "everyMinute": "Toutes les {n} minute",
+        "everyMinutes": "Toutes les {n} minutes",
+        "everySeconds": "Toutes les {n} secondes",
+        "dailyAt": "Tous les jours à {time}",
+        "empty": "—"
+      },
+      "mode": {
+        "basic": "basique",
+        "advanced": "avancé"
+      },
+      "lastPolledAt": "Dernier polling à {time}"
+    },
+    "condition": {
+      "summaryNone": "Se déclenche à chaque cycle de polling (aucune condition).",
+      "summaryRule": "Se déclenche quand {subject} {phrase}.",
+      "summaryRuleMissingValue": "Se déclenche quand {subject} {phrase} (valeur manquante — éditez pour la définir).",
+      "subject": {
+        "all": "tous ces champs",
+        "any": "au moins un de ces champs",
+        "sum": "la somme de ces champs",
+        "average": "la moyenne de ces champs",
+        "minimum": "le minimum de ces champs",
+        "maximum": "le maximum de ces champs"
+      },
+      "phrase": {
+        "changed": "changent entre deux pollings",
+        "equals": "valent \"{value}\"",
+        "greaterThan": "sont supérieurs à {value}",
+        "lessThan": "sont inférieurs à {value}",
+        "contains": "contiennent \"{value}\"",
+        "regExp": "correspondent à /{value}/"
+      },
+      "phraseSingular": {
+        "changed": "change entre deux pollings",
+        "equals": "vaut \"{value}\"",
+        "greaterThan": "est supérieure à {value}",
+        "lessThan": "est inférieure à {value}",
+        "contains": "contient \"{value}\"",
+        "regExp": "correspond à /{value}/"
+      }
+    },
+
+    "testPanel": {
+      "intro": "Déclenche le pipeline de polling une fois manuellement. L'alerte ne sera pas activée et aucun bundle ne sera déclenché — le résultat ouvrira un panneau montrant le détail par champ et le message que chaque bundle enverrait.",
+      "runButton": "Lancer un test de polling",
+      "pollingButton": "Polling…"
+    },
+
+    "testModal": {
+      "title": "Résultat du test de polling",
+      "conditionMet": "Condition remplie — l'alerte se déclencherait.",
+      "conditionNotMet": "Condition non remplie — l'alerte ne se déclencherait pas.",
+      "perFieldBreakdown": "détail par champ",
+      "discussionsCount": "{n} discussion",
+      "discussionsCountPlural": "{n} discussions",
+      "parsedSourceRaw": "Source analysée (brute)",
+      "closeButton": "Fermer",
+      "errorPrefix": "⚠ {message}"
+    },
+
+    "bundleModal": {
+      "title": "Modifier le bundle {n}",
+      "newTitle": "Nouveau bundle",
+      "closeTitle": "Fermer",
+      "savingButton": "Enregistrement…",
+      "saveButton": "Enregistrer le bundle",
+      "cancelButton": "Annuler",
+      "discardWarning": "⚠ Abandonner les modifications non enregistrées de ce bundle ?",
+      "keepEditingButton": "Continuer l'édition",
+      "discardButton": "Abandonner",
+      "untitled": "Sans titre",
+      "titleLabel": "Titre du bundle",
+      "namePlaceholder": "Bundle {n}"
+    },
+
+    "errors": {
+      "savingBundle": "Erreur lors de l'enregistrement du bundle :",
+      "testFailed": "Échec du test",
+      "duplicating": "Erreur lors de la duplication de l'alerte :"
+    }
+  },
+
+  "testVerdict": {
+    "fired": "DÉCLENCHÉE",
+    "notFired": "NON DÉCLENCHÉE"
+  },
+
+  "alertActions": {
+    "moreActions": "Plus d'actions",
+    "testNow": "Tester maintenant",
+    "duplicate": "Dupliquer",
+    "manageAccess": "Gérer l'accès",
+    "moveToProject": "Déplacer vers le projet"
+  },
+
+  "alertList": {
+    "title": "Liste d'alertes",
+    "addAlert": "Nouvelle alerte",
+    "see": "Voir",
+    "table" : {
+      "title": "Titre",
+      "status" : "Statut",
+      "input" : "Source",
+      "lastActivity" : "Dernière activité"
+    },
+    "inputs": {
+      "polling": "Data Polling",
+      "monitoring": "Monitoring",
+      "webhook": "Webhook",
+      "other": "Non défini"
+    },
+    "noLog" : "Pas d'activité",
+    "filters": {
+      "search": "Rechercher un titre ou une URL...",
+      "status": "Tous les status",
+      "input": "Toutes les sources",
+      "logStatus" : "Tous les status de journal",
+      "reset": "Réinitialiser les filtres"
+    },
+    "noAlert": "Aucune alerte créée",
+    "noAlertFiltered" : "Aucune alerte ne correspond aux critères de recherche",
+    "copyUrl": "Copier l'URL"
+  },
+
+  "logStatus": {
+    "success" : "Succès",
+    "warning" : "Avertissement",
+    "error" : "Erreur"
+  },
+
+  "testIntroDialog": {
+    "title": "À propos du test",
+    "body": "Un test exécute l'alerte une fois, immédiatement. Cela n'active pas l'alerte, ne persiste aucun état (dernier déclenchement, baseline, hash…) et n'envoie aucun message aux bundles — le résultat s'ouvrira dans un panneau pour inspecter ce que l'alerte a observé et le message que chaque bundle aurait envoyé.",
+    "dontShowAgain": "Ne plus afficher ce message",
+    "confirm": "Lancer le test"
+  },
+
+  "duplicateModal": {
+    "title": "Dupliquer l'alerte",
+    "message": "Une nouvelle alerte inactive sera créée avec la même configuration.",
+    "titleLabel": "Titre de la nouvelle alerte",
+    "titlePlaceholder": "Copie de…",
+    "copySuffix": "-copie",
+    "confirm": "Dupliquer"
+  },
+
+  "conditionEditor": {
+    "panel": {
+      "title": "Condition"
+    },
+    "mode": {
+      "none": "Déclencher à chaque cycle",
+      "rule": "Correspondre à une règle"
+    },
+    "watchedFields": {
+      "label": "Champs surveillés",
+      "hint": "Tapez un chemin, ou utilisez .. comme caractère générique (par ex. ..user.name correspond au prénom de chaque utilisateur). Ou ouvrez le sélecteur pour choisir visuellement.",
+      "hintCode": "..",
+      "hintExample": "dia..temperatura.maxima",
+      "emptyChips": "— aucun champ surveillé pour le moment —",
+      "typePath": "Saisir un chemin",
+      "pickFromSource": "Choisir depuis la source",
+      "inputPlaceholder": "collez ou tapez un chemin, puis Entrée",
+      "inputDone": "Terminé",
+      "inputCancel": "Annuler"
+    },
+    "trigger": {
+      "label": "Déclencher quand"
+    },
+    "aggregation": {
+      "all": "tous",
+      "any": "au moins un",
+      "sum": "la somme",
+      "average": "la moyenne",
+      "minimum": "le minimum",
+      "maximum": "le maximum"
+    },
+    "operator": {
+      "changed": "a changé depuis le dernier polling",
+      "equals": "égale",
+      "greaterThan": "est supérieur à",
+      "lessThan": "est inférieur à",
+      "contains": "contient",
+      "regExp": "correspond à la regex"
+    },
+    "value": {
+      "placeholder": "valeur"
+    },
+    "summary": {
+      "firesEvery": "Se déclenche à chaque cycle de polling (aucune condition).",
+      "noFields": "Aucun champ surveillé — cliquez sur des valeurs dans la source.",
+      "noMatch": "Les motifs surveillés ne correspondent à aucun chemin dans la source. Rafraîchissez ou corrigez le motif.",
+      "changedNeedsBaseline": "Le changement est détecté au moment du polling (nécessite une référence). Surveillance de {n} champ.",
+      "changedNeedsBaselinePlural": "Le changement est détecté au moment du polling (nécessite une référence). Surveillance de {n} champs.",
+      "operatorNeedsValue": "L'opérateur \"{operator}\" nécessite une valeur.",
+      "waitingForSource": "En attente des données de la source…",
+      "wouldFireAgg": "Se déclencherait — {detail}.",
+      "wouldNotFireAgg": "Ne se déclencherait pas — {detail}.",
+      "wouldFireAll": "Se déclencherait — tous les {total} champ vérifié ({passing}/{total}).",
+      "wouldFireAllPlural": "Se déclencherait — tous les {total} champs vérifiés ({passing}/{total}).",
+      "wouldFireAny": "Se déclencherait — plus d'un des {total} champ vérifié ({passing}/{total}).",
+      "wouldFireAnyPlural": "Se déclencherait — plus d'un des {total} champs vérifiés ({passing}/{total}).",
+      "wouldNotFireRequiresAll": "Ne se déclencherait pas — {passing} sur {total} champ vérifié, cette condition exige tous.",
+      "wouldNotFireRequiresAllPlural": "Ne se déclencherait pas — {passing} sur {total} champs vérifiés, cette condition exige tous.",
+      "wouldNotFireRequiresAny": "Ne se déclencherait pas — {passing} sur {total} champ vérifié, cette condition exige au moins un.",
+      "wouldNotFireRequiresAnyPlural": "Ne se déclencherait pas — {passing} sur {total} champs vérifiés, cette condition exige au moins un."
+    },
+    "validation": {
+      "patternNoMatch": "Le motif \"{value}\" ne correspond à aucun chemin dans la source récupérée.",
+      "pathNotInSource": "Le chemin \"{value}\" ne correspond à rien dans la source récupérée. Corrigez-le, cliquez sur ⟳ ci-dessus pour rafraîchir, ou appuyez sur Échap pour annuler."
+    },
+    "errors": {
+      "noUrl": "Aucune URL configurée. Revenez à l'étape de configuration d'entrée pour en définir une.",
+      "failedToRetrieve": "Échec de la récupération",
+      "networkError": "Erreur réseau",
+      "couldNotRetrieveTitle": "⚠ Impossible de récupérer la source",
+      "couldNotRetrieveHint": "Vérifiez l'URL dans l'étape de configuration d'entrée, puis cliquez sur ⟳ ci-dessus pour réessayer."
+    },
+    "picker": {
+      "title": "Choisir les champs surveillés depuis la source",
+      "closeTitle": "Fermer",
+      "refreshTitle": "Re-récupérer la source",
+      "fetching": "Récupération de {url}…",
+      "waiting": "En attente des données de la source…",
+      "empty": "Document vide.",
+      "doneButton": "Terminé",
+      "fieldsSelected": "{n} champ sélectionné",
+      "fieldsSelectedPlural": "{n} champs sélectionnés"
+    }
+  },
+
+  "formatEditor": {
+    "title": "Éditeur de format personnalisé",
+    "intro": {
+      "polling": "Cliquez les champs en bas pour insérer son chemin, ou utilisez les raccourcis de chemins surveillés sous le script.",
+      "monitoring": "Appuyez sur ⟳ pour interroger l'URL ; cliquez sur les champs en bas pour l'insérer",
+      "webhook": "Configurez le message que les utilisateurs recevront sur Olvid."
+    },
+    "watchedPathsLabel": "Chemins surveillés :",
+    "watchedPathsInsertTitle": "Insérer {token}",
+    "sourceTitlePollingFormat": "source.{format}",
+    "sourceTitleWebhook": "payload.json (Données de test)",
+    "sourceTitleMonitor": "monitor-probe.json",
+    "sourceRefreshTitle": "Re-récupérer la source",
+    "errorInvalidJsonPrettify": "JSON invalide : impossible de formater.",
+    "errorAlertNotSaved": "Cette alerte n'a pas encore été enregistrée. Aucun payload en base.",
+    "monitorProbeTitle": "Interroger l'URL du monitor",
+    "sourceExampleButton": "Exemple",
+    "sourceLastReceivedButton": "Dernier reçu",
+    "sourceLoadingPolling": "Chargement de la source…",
+    "sourceLoadingMonitor": "Interrogation du endpoint…",
+    "sourceEmptyPolling": "Appuyez sur ⟳ pour interroger l'URL.",
+    "sourceEmptyMonitor": "Appuyez sur ⟳ pour interroger l'URL du monitor.",
+    "sourceLoadingWebhook": "Chargement…",
+    "sourceNoPayloads": "Aucune charge utile reçue depuis cette source d'entrée pour le moment.",
+    "errors": {
+      "noUrlPolling": "Aucune URL configurée pour cette alerte — définissez-en une dans la configuration de polling de l'alerte.",
+      "noUrlMonitoring": "Aucune URL configurée pour ce monitor — définissez-en une dans la configuration monitoring de l'alerte.",
+      "failedToRetrieveSource": "Échec de la récupération de la source",
+      "failedToProbeMonitor": "Échec de l'interrogation de l'URL du monitor",
+      "jsonError": "Erreur dans le JSON : {message}",
+      "handlebarsError": "Erreur dans Handlebars : {message}"
+    },
+    "preview": {
+      "title": "Aperçu sur l'appareil",
+      "mailTitle": "Aperçu dans la boîte mail",
+      "placeholder": "Le message formaté apparaîtra ici...",
+      "sender": "Bot d'alerting",
+      "receiver": "Destinataire",
+      "subject": "Objet",
+      "time": "maintenant",
+      "mailHint": "Mettez en forme votre message mail avec des balises HTML",
+      "olvidHint": "Mettez en forme votre message Olvid avec le markdown Olvid — voir https://olvid.io/faq/mettre-en-forme-vos-messages/",
+      "mailSyntax" : "Syntaxe : HTML",
+      "olvidSyntax" : "Syntaxe : Markdown Olvid"
+    },
+    "mailPreview": {
+      "from": "De",
+      "to": "À",
+      "subject": "Sujet",
+      "fromPlaceholder": "Bot d'alerte",
+      "toPlaceholder": "destinataire",
+      "subjectPlaceholder": "Titre de l'alerte"
+    },
+    "buttons": {
+      "cancel": "Annuler",
+      "save": "Enregistrer le script",
+      "closeTitle": "Fermer"
+    },
+    "toolbar": {
+      "loadTemplate": "Charger un modèle",
+      "loadTemplateTitle": "Charger un modèle de charge utile",
+      "pickerMode": "Mode sélection",
+      "prettify": "Formater le JSON",
+      "clear": "Effacer"
+    },
+    "templates": {
+      "fromDatabase": "Depuis la base",
+      "fromLibrary": "Depuis la bibliothèque",
+      "lastSuccess": "Dernière charge utile réussie",
+      "lastFailed": "Dernière charge utile en échec"
+    }
+  },
+
+  "bundleKind": {
+    "groupLabel": "Canal du bundle",
+    "fieldLabel": "Canal",
+    "olvid": "Olvid",
+    "mail": "Email",
+    "pickPrompt": "Choisis un canal ci-dessus pour ajouter des destinataires."
+  },
+
+  "bundleRow": {
+    "tag": "BUNDLE {n}",
+    "untitled": "Bundle sans titre",
+    "noDestinations": "Aucune destination",
+    "editTooltip": "Modifier le bundle",
+    "removeTooltip": "Supprimer le bundle",
+    "status": {
+      "ready": "Prêt",
+      "noDestinations": "Aucune destination",
+      "noScript": "Format personnalisé défini mais aucun script"
+    },
+    "destSummary": {
+      "None": "— aucune discussion —",
+      "Plural": "{firstTwoNames} + {remaining} autres discussions",
+      "PlusOne": "{firstTwoNames} + 1 autre discussion"
+    },
+    "fields": {
+      "discussions": "Discussions",
+      "emailRecipients": "Destinataires email",
+      "mailSubject": "Objet du mail",
+      "format": "Format du message"
+    },
+    "format": {
+      "unformatted": "Brut (JSON brut)",
+      "simple": "Simple (titre + description)",
+      "custom": "Script personnalisé",
+      "pollingDefault": "Par défaut (champs surveillés)",
+      "pollingCustom": "Script personnalisé"
+    },
+    "scriptButton": "Script",
+    "removeTitle": "Supprimer le bundle",
+    "editTitle": "Modifier ce bundle",
+    "editButton": "✎ Modifier"
+  },
+
+  "discussionSelector": {
+    "search": {
+      "loading": "Chargement...",
+      "noneAvailable": "Aucune discussion disponible",
+      "addPlaceholder": "Ajouter une discussion..."
+    },
+    "dropdown": {
+      "noFound": "Aucune discussion trouvée dans le démon",
+      "allAdded": "Toutes les discussions sont déjà ajoutées"
+    },
+    "empty": "— aucune discussion —",
+    "change": "Changer"
+  },
+
+  "emailRecipientSelector": {
+    "addPlaceholder": "Ajouter une adresse email...",
+    "empty": "— aucun destinataire —",
+    "invalidAddress": "Adresse email invalide"
+  },
+
+  "inputSourceSelector": {
+    "searchPlaceholder": "Choisisez une source",
+    "changeButton": "Changer",
+    "labels": {
+      "polling": "Data Polling",
+      "monitoring": "Monitoring",
+      "webhook": "Webhook"
+    }
+  },
+
+  "alertParamsEditor": {
+    "url": {
+      "label": "URL",
+      "placeholder": "https://example.com/feed.xml",
+      "hint": "Endpoint que le système d'alerte va interroger."
+    },
+    "format": {
+      "label": "Format",
+      "hint": "Type de contenu retourné par l'URL."
+    },
+    "interval": {
+      "label": "Intervalle de polling",
+      "every": "toutes les",
+      "at": "à"
+    },
+    "units": {
+      "minutes": "minutes",
+      "hours": "heures",
+      "daily": "chaque jour"
+    },
+    "cron": {
+      "legend": {
+        "minute": "minute",
+        "hour": "heure",
+        "dayOfMonth": "jour-du-mois",
+        "month": "mois",
+        "dayOfWeek": "jour-de-la-semaine"
+      },
+      "invalid": "Expression cron invalide"
+    }
+  },
+
+  "triggerSelector": {
+    "lockedHint": "— comment cette source communique avec le système d'alerte",
+    "empty": "Sélectionnez d'abord une source d'entrée."
+  },
+
+  "select": {
+    "placeholder": "Sélectionner…"
+  },
+
+  "urlCopyBox": {
+    "copiedTitle": "Copié !",
+    "copyTitle": "Copier l'URL"
+  },
+
+  "xmlTree": {
+    "leafTitle": "Cliquer pour surveiller : {path}"
+  },
+
+  "monitorEditor": {
+    "url": {
+      "label": "URL du endpoint",
+      "placeholder": "https://exemple.com/health",
+      "hint": "L'URL dont on surveille le code de statut HTTP."
+    },
+    "interval": {
+      "label": "Intervalle de vérification"
+    },
+    "match": {
+      "label": "Déclencher quand",
+      "kind": {
+        "codes": "Codes spécifiques",
+        "range": "Plage",
+        "notOk": "Tout non-2xx",
+        "noHttpResponse": "Pas de réponse HTTP"
+      },
+      "codesEmpty": "Aucun code — ajoutez-en au moins un ci-dessous.",
+      "codesPlaceholder": "ex. 404",
+      "codesHint": "L'alerte se déclenche dès que le statut de la réponse figure dans cette liste.",
+      "addCode": "Ajouter",
+      "notOkHint": "Se déclenche pour toute réponse hors de 200-299 (redirections, erreurs client, erreurs serveur).",
+      "noHttpHint": "Se déclenche quand le serveur ne renvoie pas de réponse HTTP (connexion échouée ou refusée)",
+      "summary" : {
+        "codes": "Se déclenche sur les codes : {codes}",
+        "noCode": "Ajoutez au moins un code HTTP.",
+        "range": "Se déclenche pour n'importe quelle réponse dans la plage {range}",
+        "notOk": "Se déclenche pour n'importe quelle réponse non-2xx",
+        "noHttpResponse": "Se déclenche lorsque le serveur ne renvoie pas de réponse HTTP"
+      },
+      "rangeOptions": {
+        "2xx": "2xx — succès",
+        "3xx": "3xx — redirection",
+        "4xx": "4xx — erreur client",
+        "5xx": "5xx — erreur serveur"
+      }
+    },
+    "view": {
+      "triggersOn": "Condition",
+      "codes": "Codes : {codes}",
+      "range": "Toute réponse {range}",
+      "notOk": "Toute réponse non-2xx",
+      "noHttpResponse": "Pas de réponse HTTP"
+    }
+  },
+
+  "alertLog": {
+    "title": "Journal d'état",
+    "empty": "Aucun sondage enregistré pour le moment.",
+    "showDetails": "Afficher les détails",
+    "hideDetails": "Masquer les détails",
+    "noAdditionalDetail": "Aucun détail supplémentaire.",
+    "channelsAria": "Résultat de l'envoi par canal",
+    "status": {
+      "sent": "Envoyé",
+      "partial": "Partiel",
+      "failed": "Échec"
+    },
+    "stage": {
+      "fetch": "Récupération",
+      "parse": "Analyse",
+      "evaluate": "Évaluation",
+      "dispatch": "Envoi"
+    },
+    "channel": {
+      "olvid": "Olvid",
+      "mail": "E-mail"
+    },
+    "detail": {
+      "stage": "Étape"
+    },
+    "channelTable": {
+      "channel": "Canal",
+      "recipients": "Destinataires",
+      "outcome": "Résultat",
+      "error": "Erreur",
+      "ok": "Livré",
+      "fail": "Échec"
+    }
+  },
+
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "submit": "Se connecter",
+      "identifierEmail": "Adresse e-mail",
+      "identifierUsername": "Nom d'utilisateur",
+      "password": "Mot de passe",
+      "errorInvalidCredentials": "Identifiants invalides.",
+      "errorNotActivated": "Votre compte n'est pas encore activé. Consultez l'e-mail d'invitation.",
+      "errorPasswordNotAuthorized": "L'authentification par mot de passe n'est pas activée pour ce compte.",
+      "errorOlvidNotAuthorized": "L'authentification par Olvid n'est pas activée pour ce compte.",
+      "errorReaction": "Erreur lors de l'attente de la réaction.",
+      "errorDaemon": "Le démon est hors-ligne : l'identification par Olvid est temporairement indisponible.",
+      "error": "Une erreur est survenue.",
+      "resendVerification": "Renvoyer l'e-mail de vérification",
+      "verificationSent": "E-mail de vérification envoyé. Consultez votre boîte de réception.",
+      "forgot": "Mot de passe oublié ?",
+      "forgotTitle": "Réinitialiser le mot de passe",
+      "forgotHint": "Entrez votre identifiant. Nous enverrons un lien de réinitialisation au canal associé à ce compte.",
+      "forgotSubmit": "Renvoyer le mot de passe",
+      "forgotBusy": "Envoi…",
+      "forgotBackToLogin": "Retour à la connexion",
+      "resetSubmitted": "Si nous reconnaissons cet identifiant, un lien de réinitialisation a été envoyé sur le canal associé. Consultez votre conversation Olvid ou votre boîte de réception — si rien n'arrive, demandez à un administrateur une nouvelle invitation.",
+      "resetNetworkError": "Impossible de joindre le serveur — veuillez réessayer.",
+      "olvidTitle": "Connexion via Olvid",
+      "olvid": "Olvid",
+      "olvidParagraph": "Recevez un message sur la dicussion Olvid associé à votre compte et ajoutez une réaction pour vous connecter.",
+      "olvidSent": "Un message a été envoyé sur la discussion Olvid associée au compte {user}. Ajoutez une réaction pour autoriser la connexion."
+    },
+    "invite": {
+      "title": "Accepter l'invitation",
+      "hintPassword": "Choisissez une ou plusieurs méthodes d'authentification pour activer votre compte.",
+      "hintPasswordWithLogin": "Choisissez une ou plusieurs méthodes d'authentification pour activer votre compte avec l'identifiant {login}.",
+      "hintOlvidMethod": "Recevez un message sur votre profil Olvid et ajoutez-y une réaction pour vous connecter.",
+      "hintPasswordMethod": "Choisissez un mot de passe à entrer pour vous connecter.",
+      "olvidMethod": "Authentification par Olvid",
+      "passwordMethod": "Authentification par mot de passe",
+      "passwordPlaceholder": "Nouveau mot de passe (min. 8 caractères)",
+      "confirmPasswordPlaceholder": "Confirmer le mot de passe",
+      "submit": "Activer le compte",
+      "errorMissingToken": "Jeton d'invitation manquant.",
+      "errorPasswordsDoNotMatch": "Les mots de passe ne correspondent pas",
+      "errorTokenInvalid": "Cette invitation est invalide, expirée ou déjà utilisée.",
+      "errorBadPassword": "Choisissez un mot de passe d'au moins 8 caractères.",
+      "errorNetwork": "Impossible de joindre le serveur — veuillez réessayer.",
+      "errorIdentityFetch": "Impossible de récupérer les données de la discussion temporairement. Le profil relié est celui sur lequel vous avez reçu le lien d'invitation.",
+      "errorNoMethod": "Veuillez choisir une méthode d'authentification.",
+      "invalidTitle": "Invitation invalide ou expirée",
+      "invalidBody": "Ce lien d'invitation est invalide, expiré ou déjà utilisé. Demandez à votre administrateur une nouvelle invitation."
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "hint": "Choisissez un nouveau mot de passe pour terminer la réinitialisation.",
+      "hintWithLogin": "Choisissez un nouveau mot de passe pour {login}.",
+      "passwordPlaceholder": "Nouveau mot de passe (min. 8 caractères)",
+      "confirmPasswordPlaceholder": "Confirmer le mot de passe",
+      "submit": "Définir le nouveau mot de passe",
+      "errorMissingToken": "Jeton de réinitialisation manquant.",
+      "errorPasswordsDoNotMatch": "Les mots de passe ne correspondent pas",
+      "errorTokenInvalid": "Ce lien de réinitialisation est invalide, expiré ou déjà utilisé.",
+      "errorBadPassword": "Choisissez un mot de passe d'au moins 8 caractères.",
+      "errorNetwork": "Impossible de joindre le serveur — veuillez réessayer.",
+      "invalidTitle": "Lien de réinitialisation invalide ou expiré",
+      "invalidBody": "Ce lien de réinitialisation est invalide, expiré ou déjà utilisé. Demandez-en un nouveau depuis la page de connexion."
+    },
+    "verify": {
+      "pending": "Vérification…",
+      "successTitle": "E-mail vérifié",
+      "successBody": "Votre adresse e-mail est confirmée. Vous pouvez maintenant vous connecter.",
+      "successCta": "Aller à la connexion",
+      "errorTitle": "Échec de la vérification",
+      "errorBody": "Ce lien est invalide, expiré ou déjà utilisé. Demandez-en un nouveau depuis la page de connexion.",
+      "errorCta": "Retour à la connexion"
+    },
+    "setup": {
+      "title": "Configuration initiale",
+      "hint": "Collez la clé ADMIN_KEY de votre .env pour prouver que vous avez déployé cette instance.",
+      "adminKey": "ADMIN_KEY",
+      "keyNext": "Suivant",
+      "keyBusy": "Vérification…",
+
+      "inviteTitle": "Invitez-vous comme premier administrateur",
+      "inviteHint": "Choisissez un canal de livraison — le même que vous utiliseriez pour inviter n'importe qui — et nous vous enverrons le lien d'activation. Vous définirez votre mot de passe en l'ouvrant.",
+      "fieldLogin": "Nom d'utilisateur",
+      "loginPlaceholder": "Le nom que vous saisirez à la connexion",
+      "fieldName": "Nom affiché (facultatif)",
+      "namePlaceholder": "Nom affiché dans l'application",
+      "fieldEmail": "E-mail",
+      "emailPlaceholder": "Où envoyer le lien d'activation",
+      "inviteSubmit": "Envoyer le lien d'activation",
+      "inviteBusy": "Envoi…",
+      "back": "Retour",
+
+      "doneTitle": "Configuration démarrée",
+      "doneMail": "Lien d'activation envoyé par e-mail. Ouvrez-le pour définir votre mot de passe et vous connecter.",
+      "doneOlvid": "Lien d'activation envoyé via Olvid. Ouvrez le message du bot pour définir votre mot de passe.",
+      "doneLink": "Ouvrez le lien d'activation ci-dessous pour définir votre mot de passe et vous connecter.",
+      "doneCta": "Aller à la connexion",
+
+      "errorAdminKeyNotConfigured": "ADMIN_KEY n'est pas défini sur le serveur. Configurez-le dans .env puis redémarrez.",
+      "errorInvalidAdminKey": "Cette clé d'administrateur ne correspond pas à celle configurée sur le serveur.",
+      "errorAlreadyComplete": "Un administrateur existe déjà sur ce déploiement.",
+      "errorEmailRequired": "Une adresse e-mail est requise pour le canal e-mail.",
+      "errorMailNotConfigured": "SMTP n'est pas configuré sur ce déploiement — choisissez un autre canal.",
+      "errorOlvidRequired": "Choisissez une discussion Olvid (contact) pour la livraison.",
+      "errorFallback": "Impossible de démarrer la configuration. Vérifiez les champs et réessayez."
+    },
+    "users": {
+      "inviteButton": "Inviter un utilisateur",
+      "table": {
+        "login": "Login",
+        "name": "Nom",
+        "role": "Rôle",
+        "status": "Statut",
+        "methods": "Méthodes d'authentification"
+      },
+      "loginTagEmail": "L'identifiant est une adresse e-mail",
+      "loginTagOlvid": "L'identifiant est une discussion Olvid",
+      "loginTagLocal": "Nom d'utilisateur local",
+      "copyLinkTitle": "Générer et copier un lien d'invitation",
+      "resendTitle": "Renvoyer l'invitation",
+      "confirmDeletePrompt": "Supprimer l'utilisateur {login} ?",
+      "confirmResendPrompt": "Renvoyer l'invitation à {recipient} via {channel} ?",
+      "confirmResendConfirm": "Renvoyer",
+      "resendSuccessTitle": "Invitation envoyée",
+      "resendSuccessMessage": "Une nouvelle invitation a été envoyée à {recipient} via {channel}.",
+      "channelMail": "e-mail"
+    },
+    "inviteModal": {
+      "title": "Inviter un nouvel utilisateur",
+      "channelLabel": "Canal de livraison",
+      "channelPillMail": "E-mail",
+      "channelPillOlvid": "Olvid",
+      "channelPillLink": "Lien partageable",
+      "channelPillMailDisabled": "SMTP n'est pas configuré sur ce déploiement.",
+      "fieldName": "Nom",
+      "namePlaceholder": "Alice",
+      "fieldEmail": "E-mail",
+      "emailPlaceholder": "alice{'@'}exemple.com",
+      "fieldUsername": "Nom d'utilisateur (identifiant)",
+      "usernamePlaceholder": "alice",
+      "fieldRole": "Rôle",
+      "fieldOlvidDiscussion": "Discussion Olvid",
+      "submitMail": "Envoyer par e-mail",
+      "submitMailBusy": "Envoi…",
+      "submitLink": "Créer et copier le lien",
+      "submitLinkBusy": "Création…",
+      "submitOlvid": "Envoyer via Olvid",
+      "submitOlvidBusy": "Envoi…",
+      "cancel": "Annuler",
+      "ariaLabel": "Inviter un utilisateur",
+      "errorUserAlreadyActive": "Cet utilisateur possède déjà un compte actif.",
+      "errorLoginInUse": "Cet identifiant est déjà utilisé. Choisissez-en un autre, ou renvoyez l'invitation depuis la liste des utilisateurs.",
+      "errorEmailInUse": "Cet e-mail est déjà associé à un autre utilisateur. Renvoyez l'invitation depuis la liste des utilisateurs.",
+      "errorOlvidInUse": "Cette discussion Olvid est déjà associée à un autre utilisateur. Choisissez une autre discussion.",
+      "errorEmailRequired": "L'e-mail est requis pour une invitation par e-mail.",
+      "errorMailNotConfigured": "SMTP n'est pas configuré sur ce déploiement.",
+      "errorOlvidRequired": "Choisissez une discussion Olvid pour envoyer l'invitation.",
+      "errorFallback": "Impossible de créer l'invitation."
+    },
+    "reveal": {
+      "title": "Lien d'invitation prêt",
+      "ariaLabel": "Lien d'invitation",
+      "body": "Nouveau {role} avec l'identifiant {login} créé. Copiez l'URL d'invitation ci-dessous.",
+      "close": "Fermer"
+    }
+  },
+
+  "pageTitle": {
+    "suffix": "Olvid Alerting",
+    "index": "App",
+    "alertView": "{alert}",
+    "alertList": "Liste des alertes",
+    "alertNew": "Nouvelle alerte",
+    "invite": "Inviter",
+    "login": "Se connecter",
+    "reset-password": "Réinitialiser le mot de passe",
+    "setup": "Setup",
+    "users": "Utilisateurs",
+    "verify": "Vérifier"
+
+  },
+
+  "externalMessage": {
+    "olvidLogin": "\uD83D\uDEA8 **Olvid Alerting**\nA login request has been made for user *{login}*.\nReact to this message to complete authentication.",
+    "olvidLoginSuccessful": "\uD83D\uDEA8 **Olvid Alerting**\nLogin complete ✅",
+    "invite": "\uD83D\uDEA8 **Olvid Alerting**\nYou've been invited to Olvid Alerting by {who}\n\nOpen this link to set your password and activate your account (expires in 7 days) :\n{url}",
+    "resetPassword": "\uD83D\uDEA8 **Olvid Alerting**\nA password reset was requested for your Alerting Bot account.\nOpen this link to pick a new password (expires in 1 hour):\n${url}\n\nIf you didn't request this, you can ignore this message."
+  }
+}

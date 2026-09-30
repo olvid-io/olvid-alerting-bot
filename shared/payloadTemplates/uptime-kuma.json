@@ -1,0 +1,38 @@
+{
+  "heartbeat": {
+    "monitorID": 3,
+    "status": 0,
+    "time": "2026-06-30 15:20:00.000",
+    "msg": "Request failed with status code 503",
+    "important": true,
+    "duration": 60,
+    "timezone": "Europe/Paris",
+    "timezoneOffset": "+02:00",
+    "localDateTime": "2026-06-30 17:20:00",
+    "ping": null,
+    "retries": 3
+  },
+  "monitor": {
+    "id": 3,
+    "name": "Example API",
+    "description": "Public API health check",
+    "url": "https://api.example.com/health",
+    "method": "GET",
+    "hostname": null,
+    "port": null,
+    "type": "http",
+    "interval": 60,
+    "retryInterval": 60,
+    "maxretries": 3,
+    "active": true,
+    "maintenance": false,
+    "tags": [
+      {
+        "name": "production",
+        "color": "#DC2626",
+        "value": ""
+      }
+    ]
+  },
+  "msg": "[Example API] [🔴 Down] Request failed with status code 503"
+}

@@ -1,0 +1,69 @@
+{
+  "event": {
+    "id": "01EXAMPLEEVENTID0001",
+    "event_type": "incident.triggered",
+    "resource_type": "incident",
+    "occurred_at": "2026-06-30T15:20:00.000Z",
+    "agent": {
+      "html_url": "https://example-org.pagerduty.com/services/PSVC001",
+      "id": "PSVC001",
+      "self": "https://api.pagerduty.com/services/PSVC001",
+      "summary": "API Gateway",
+      "type": "service_reference"
+    },
+    "client": null,
+    "data": {
+      "id": "Q0EXAMPLE0001",
+      "type": "incident",
+      "self": "https://api.pagerduty.com/incidents/Q0EXAMPLE0001",
+      "html_url": "https://example-org.pagerduty.com/incidents/Q0EXAMPLE0001",
+      "number": 128,
+      "status": "triggered",
+      "incident_key": "a3b8c2d4e5f67890",
+      "created_at": "2026-06-30T15:20:00Z",
+      "title": "High CPU Usage on api-gateway (production)",
+      "urgency": "high",
+      "service": {
+        "html_url": "https://example-org.pagerduty.com/services/PSVC001",
+        "id": "PSVC001",
+        "self": "https://api.pagerduty.com/services/PSVC001",
+        "summary": "API Gateway",
+        "type": "service_reference"
+      },
+      "assignees": [
+        {
+          "html_url": "https://example-org.pagerduty.com/users/PUSR001",
+          "id": "PUSR001",
+          "self": "https://api.pagerduty.com/users/PUSR001",
+          "summary": "Jane Doe",
+          "type": "user_reference"
+        }
+      ],
+      "escalation_policy": {
+        "html_url": "https://example-org.pagerduty.com/escalation_policies/PESC001",
+        "id": "PESC001",
+        "self": "https://api.pagerduty.com/escalation_policies/PESC001",
+        "summary": "Default Escalation Policy",
+        "type": "escalation_policy_reference"
+      },
+      "teams": [
+        {
+          "html_url": "https://example-org.pagerduty.com/teams/PTEAM01",
+          "id": "PTEAM01",
+          "self": "https://api.pagerduty.com/teams/PTEAM01",
+          "summary": "Platform Team",
+          "type": "team_reference"
+        }
+      ],
+      "priority": {
+        "html_url": "https://example-org.pagerduty.com/account/incident_priorities",
+        "id": "PPRIO01",
+        "self": "https://api.pagerduty.com/priorities/PPRIO01",
+        "summary": "P1",
+        "type": "priority"
+      },
+      "conference_bridge": null,
+      "resolve_reason": null
+    }
+  }
+}

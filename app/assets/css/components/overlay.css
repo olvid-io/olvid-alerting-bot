@@ -1,0 +1,100 @@
+/*
+ * Olvid Alerting
+ * Copyright © 2026 Olvid SAS
+ *
+ * Olvid Alerting is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * Olvid Alerting is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Olvid Alerting. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* Modal dialogs. Position:fixed so the scrim covers the whole viewport
+ * regardless of which positioned ancestor renders the overlay. Higher
+ * z-index than .top-nav (which sits at 100). */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.overlay-box {
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-overlay);
+  /* Width fallback for consumers that don't pass a `size` prop.
+   * Individual size modifiers below narrow this cap. */
+  width: min(92vw, 560px);
+  box-sizing: border-box;
+}
+
+/* Size modifiers — one class per Modal `size` prop value. Every size
+ * caps at 92vw so no mobile overflow, then adds its own max.
+ *
+ * The compact cap was tuned to fit a 3-button prompt in a wordy
+ * locale (French: "Enregistrer en brouillon" + "Continuer l'édition"
+ * + "Abandonner" ≈ 420px of button content alone, before padding).
+ * Two-button prompts still look centred at this width. */
+.overlay-box--compact {
+  width: min(92vw, 500px);
+}
+.overlay-box--default {
+  width: min(92vw, 560px);
+}
+.overlay-box--wide {
+  width: min(92vw, 650px);
+}
+/* `full` — a tall form shell (bundle-edit dialog, invite reveal…).
+ * The caller owns head + body + foot layout inside; the box just gives
+ * them a fixed-height flex column with hidden overflow so their inner
+ * scroll containers flex correctly. */
+.overlay-box--full {
+  max-width: 650px;
+  height: 92vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* `editor` — the widest shell we ship. */
+.overlay-box--editor {
+  width: 96vw;
+  height: 96vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.overlay-box h4 {
+  margin: 0 0 var(--space-3);
+  color: var(--color-text-primary);
+  font-size: var(--text-lg);
+}
+.overlay-box p {
+  margin: 0 0 18px;
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+
+.overlay-actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: var(--space-3);
+}

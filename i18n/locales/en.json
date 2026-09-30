@@ -1,0 +1,948 @@
+{
+  "topNav": {
+    "title": "Alerting System",
+    "daemonIsUp": "Olvid daemon connected",
+    "daemonIsDown": "Olvid daemon disconnected",
+    "photoAlt": "Bot profile picture",
+    "nameAlt": "Alerting bot",
+    "themeToggle": "Toggle Theme",
+    "languageToggle": "Change language",
+    "users": "Users",
+    "login": "Login"
+  },
+
+  "accountMenu": {
+    "account": "Account",
+    "login": "Login",
+    "email": "Email",
+    "role": "Role",
+    "logout": "Logout"
+  },
+
+  "index": {
+    "placeholder": "Select an alert from the list, or create a new one."
+  },
+
+  "sidebar": {
+    "title": "Alert List",
+    "empty": "No alerts yet",
+    "loginPrompt": "Log in to see your alerts",
+    "searchPlaceholder": "Filter alerts...",
+    "statusLabel": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "draft": "Draft"
+    }
+  },
+
+  "user": { 
+    "pageTitle": "Users",
+    "userRow" :{
+      "status": {
+        "registered": "Registered",
+        "pending": "Pending Invite"
+      },
+      "role" : {
+        "admin": "Admin",
+        "user" : "User"
+      }
+    },
+    "invitation" :{
+      "send": "Send invitation"
+    }
+  },
+
+  "alertStatus": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "draft": "Draft"
+  },
+
+  "alertPage": {
+    "loading": "Loading…",
+    "notFound": "Alert not found."
+  },
+
+  "common": {
+    "untitled": "Untitled",
+    "untitledAlert": "Untitled alert...",
+    "descriptionPlaceholder": "Add a brief description…",
+    "unknownError": "Unknown error",
+    "loadingEllipsis": "Loading…",
+    "emDash": "—",
+    "via": "via",
+    "saving": "Saving…",
+    "deleting": "Deleting…",
+    "polling": "Polling…",
+    "fieldRequired": "*"
+  },
+
+  "button": {
+    "saveAlert": "Save Alert",
+    "saveAsDraft": "Save as Draft",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "ok": "OK",
+    "newAlert": "New Alert",
+    "backToList": "Back to alert",
+    "back": "Back",
+    "continue": "Continue",
+    "editAlert": "Edit",
+    "close": "Close",
+    "done": "Done",
+    "discard": "Discard",
+    "keepEditing": "Keep editing",
+    "continueEditing": "Continue editing",
+    "saveBundle": "Save bundle",
+    "manageUsers": "Users"
+  },
+
+  "selector": {
+    "change": "Change",
+    "noResults": "No results found"
+  },
+
+  "wizard": {
+    "alertTitleAria": "Alert title",
+    "alertDescriptionAria": "Alert description",
+
+    "discardModal": {
+      "title": "Unsaved changes",
+      "message": "If you leave now, your progress will be lost. Would you like to save this alert as a draft before leaving?"
+    },
+
+    "deleteModal": {
+      "title": "Delete this alert?",
+      "message": "This removes the alert and all its bundles. This cannot be undone."
+    },
+
+    "steps": {
+      "general": {
+        "title": "General",
+        "descriptionPolling": "Title, source & polling config",
+        "descriptionWebhook": "Title & source"
+      },
+      "trigger": {
+        "title": "Trigger",
+        "description": "When to fire"
+      },
+      "bundle": {
+        "title": "Bundles",
+        "description": "Add notification targets"
+      }
+    },
+
+    "fieldLabels": {
+      "generalInfo": "General Info",
+      "title": "Title",
+      "description": "Description",
+      "inputSource": "Input Source",
+      "pollingConfiguration": "Polling configuration",
+      "monitorConfiguration": "Monitoring configuration"
+    },
+
+    "communicationHint": "Communication: how this source talks to the alert system.",
+
+    "webhookInfo": {
+      "title": "Webhook URL",
+      "body": " uses a webhook. Nothing more to configure here — a unique URL will be generated once you save the alert, and you can paste it into the source's outgoing-webhook settings. The URL will appear in this alert's view page after save."
+    },
+
+    "bundleStep": {
+      "intro": "A {bundle} is one notification target: a set of discussions plus a message format.",
+      "bundleWord": "bundle",
+      "startAdding": "Start adding bundles",
+      "newBundle": "New Bundle",
+      "warnHint": "⚠ Some bundles have no discussions selected — this alert will be saved as a {draft} until every bundle has at least one discussion.",
+      "draftWord": "draft"
+    },
+
+    "footer": {
+      "saveAlert": "Save alert",
+      "saveAsDraft": "Save as draft",
+      "saveAlertTitle": "Save the alert and return to view mode",
+      "saveAsDraftTitle": "Save as draft and return to view mode",
+      "saveAsDraftNoTitle": "Add a title to save",
+      "configureTrigger": "Configure trigger",
+      "addBundles": "Add bundles"
+    },
+
+    "validation": {
+      "titleMandatory": "Title is mandatory"
+    },
+
+    "errors": {
+      "saving": "Error saving alert:",
+      "deleting": "Error deleting alert:"
+    },
+
+    "triggerMode": {
+      "fieldLabel": "Trigger mode",
+      "labels": {
+        "every-time": "Every time",
+        "one-shot": "Once",
+        "with-recovery": "Once + on recovery"
+      },
+      "hints": {
+        "polling": {
+          "every-time": "Fire on every poll while the condition is met.",
+          "one-shot": "Fire only on the first poll where the condition becomes true.",
+          "with-recovery": "Fire once, then again when the condition no longer holds."
+        },
+        "monitoring": {
+          "every-time": "Fire on every poll where the status matches.",
+          "one-shot": "Fire only the first time the status matches (transition into matching).",
+          "with-recovery": "Fire once, then again when the status stops matching (recovery)."
+        }
+      }
+    },
+
+    "firingBehavior": {
+      "title": "Firing behavior",
+      "triggerModeLabel": "Trigger mode",
+      "datapointsLabel": "Datapoints",
+      "datapointsSentence": "Fire after {n} of the last {m} evaluations match.",
+      "datapointsHint": "Reduce false alarms by waiting for consecutive confirmations. Default 1 of 1 (fire immediately)."
+    }
+  },
+
+  "editor": {
+    "header": {
+      "editAlert": "Edit"
+    },
+    "view": {
+      "fields": {
+        "source": "Source",
+        "endpoint": "Endpoint",
+        "url": "URL",
+        "polling": "Polling",
+        "condition": "Condition",
+        "discussions": "Discussions",
+        "format": "Format",
+        "trigger": "Trigger"
+      },
+      "dividers": {
+        "triggerConfiguration": "Trigger configuration",
+        "bundles": "Bundles ({count})",
+        "testPolling": "Test polling",
+        "messagesPerBundle": "Messages per bundle"
+      },
+      "noBundles": "No bundles configured. Click {editAlert} to add one.",
+      "noBundlesEditAlert": "Edit",
+      "bundleTag": "BUNDLE {n}",
+      "bundleEdit": "Edit",
+      "discussionsEmpty": "— none —",
+      "eyebrowConfiguration": "Configuration",
+      "eyebrowBundles": "Bundles",
+      "inputTitle": {
+        "polling": "Data Polling Alert",
+        "monitoring": "Monitoring Alert",
+        "webhook": "Webhook Alert",
+        "generic": "{input} Alert"
+      }
+    },
+
+    "schedule": {
+      "interval": {
+        "everyDay": "Every {n} day",
+        "everyDays": "Every {n} days",
+        "everyHour": "Every {n} hour",
+        "everyHours": "Every {n} hours",
+        "everyMinute": "Every {n} minute",
+        "everyMinutes": "Every {n} minutes",
+        "everySeconds": "Every {n} seconds",
+        "dailyAt": "Daily at {time}",
+        "empty": "—"
+      },
+      "mode": {
+        "basic": "basic",
+        "advanced": "advanced"
+      },
+      "lastPolledAt": "Last polled at {time}"
+    },
+
+    "condition": {
+      "summaryNone": "Fires every poll cycle (no condition).",
+      "summaryRule": "Fires when {subject} {phrase}.",
+      "summaryRuleMissingValue": "Fires when {subject} {phrase} (value missing — edit to set).",
+      "subject": {
+        "all": "all of the watched fields",
+        "any": "any of the watched fields",
+        "sum": "the sum of the watched fields",
+        "average": "the average of the watched fields",
+        "minimum": "the minimum of the watched fields",
+        "maximum": "the maximum of the watched fields"
+      },
+      "phrase": {
+        "changed": "change between polls",
+        "equals": "equal \"{value}\"",
+        "greaterThan": "are greater than {value}",
+        "lessThan": "are less than {value}",
+        "contains": "contain \"{value}\"",
+        "regExp": "match /{value}/"
+      },
+      "phraseSingular": {
+        "changed": "changes between polls",
+        "equals": "equals \"{value}\"",
+        "greaterThan": "is greater than {value}",
+        "lessThan": "is less than {value}",
+        "contains": "contains \"{value}\"",
+        "regExp": "matches /{value}/"
+      }
+    },
+
+    "testPanel": {
+      "intro": "Trigger the polling pipeline once manually. The alert won't be activated and no bundles will be fired — the result will open in a panel showing the per-field breakdown and the message each bundle would send.",
+      "runButton": "Run test poll",
+      "pollingButton": "Polling…"
+    },
+
+    "testModal": {
+      "title": "Test poll result",
+      "conditionMet": "Condition met — alert would fire.",
+      "conditionNotMet": "Condition not met — alert would not fire.",
+      "perFieldBreakdown": "per-field breakdown",
+      "discussionsCount": "{n} discussion",
+      "discussionsCountPlural": "{n} discussions",
+      "parsedSourceRaw": "Parsed source (raw)",
+      "closeButton": "Close",
+      "errorPrefix": "⚠ {message}"
+    },
+
+    "bundleModal": {
+      "title": "Edit bundle {n}",
+      "newTitle": "New bundle",
+      "closeTitle": "Close",
+      "savingButton": "Saving…",
+      "saveButton": "Save bundle",
+      "cancelButton": "Cancel",
+      "discardWarning": "⚠ Discard unsaved changes to this bundle?",
+      "keepEditingButton": "Keep editing",
+      "discardButton": "Discard",
+      "untitled": "Untitled",
+      "titleLabel": "Bundle Title",
+      "namePlaceholder": "Bundle {n}"
+    },
+
+    "errors": {
+      "savingBundle": "Error saving bundle:",
+      "testFailed": "Test failed",
+      "duplicating": "Error duplicating alert:"
+    }
+  },
+
+  "testVerdict": {
+    "fired": "FIRED",
+    "notFired": "DID NOT FIRE"
+  },
+
+  "alertActions": {
+    "moreActions": "More actions",
+    "testNow": "Test now",
+    "duplicate": "Duplicate",
+    "manageAccess": "Manage access",
+    "moveToProject": "Move to project"
+  },
+
+  "alertList": {
+    "title": "Alerts list",
+    "addAlert": "Add alert",
+    "see": "See",
+    "table" : {
+      "title": "Title",
+      "status" : "Status",
+      "input" : "Source",
+      "lastActivity" : "Last activity"
+    },
+    "inputs": {
+      "polling": "Data Polling",
+      "monitoring": "Monitoring",
+      "webhook": "Webhook",
+      "other": "Undefined"
+    },
+    "noLog" : "No activity",
+    "filters": {
+      "search": "Search a title or an URL...",
+      "status": "All statuses",
+      "input": "All inputs",
+      "logStatus" : "All log status",
+      "reset": "Reset filters"
+    },
+    "noAlert": "No alert created",
+    "noAlertFiltered" : "No alert matching search criteria",
+    "copyUrl": "Copy URL"
+  },
+
+  "logStatus": {
+    "success" : "Success",
+    "warning" : "Warning",
+    "error" : "Error"
+  },
+
+  "testIntroDialog": {
+    "title": "About running a test",
+    "body": "A test runs your alert once, right now. It does not activate the alert, does not persist any state (last-fired, baseline, hash…) and does not notify any of the alert's bundles — the result opens in a panel so you can inspect what the alert observed and the message each bundle would have sent.",
+    "dontShowAgain": "Don't show this message again",
+    "confirm": "Run test"
+  },
+
+  "duplicateModal": {
+    "title": "Duplicate alert",
+    "message": "A new inactive alert will be created with the same configuration.",
+    "titleLabel": "New alert title",
+    "titlePlaceholder": "Copy of…",
+    "copySuffix": "-copy",
+    "confirm": "Duplicate"
+  },
+
+  "conditionEditor": {
+    "panel": {
+      "title": "Condition"
+    },
+    "mode": {
+      "none": "Fire every poll cycle",
+      "rule": "Match a rule"
+    },
+    "watchedFields": {
+      "label": "Watched fields",
+      "hint": "Type a path, or use .. as a wildcard (e.g. ..user.name mathes every 'name' value on any 'user' on the file). Or open the picker to choose visually.",
+      "hintCode": "..",
+      "hintExample": "dia..temperatura.maxima",
+      "emptyChips": "— no watched fields yet —",
+      "typePath": "Type path",
+      "pickFromSource": "Pick from source",
+      "inputPlaceholder": "paste or type a path, then Enter",
+      "inputDone": "Done",
+      "inputCancel": "Cancel"
+    },
+    "trigger": {
+      "label": "Trigger when"
+    },
+    "aggregation": {
+      "all": "all of them",
+      "any": "at least one",
+      "sum": "the sum",
+      "average": "the average",
+      "minimum": "the minimum",
+      "maximum": "the maximum"
+    },
+    "operator": {
+      "changed": "has changed since last poll",
+      "equals": "equals",
+      "greaterThan": "is greater than",
+      "lessThan": "is less than",
+      "contains": "contains",
+      "regExp": "matches regex"
+    },
+    "value": {
+      "placeholder": "value"
+    },
+    "summary": {
+      "firesEvery": "Fires every poll cycle (no condition).",
+      "noFields": "No fields watched — click values in the source.",
+      "noMatch": "Watched patterns don't match any paths in the source. Refresh or fix the pattern.",
+      "changedNeedsBaseline": "Change is detected at poll time (needs a baseline). Watching {n} field.",
+      "changedNeedsBaselinePlural": "Change is detected at poll time (needs a baseline). Watching {n} fields.",
+      "operatorNeedsValue": "Operator \"{operator}\" needs a value.",
+      "waitingForSource": "Waiting for source data…",
+      "wouldFireAgg": "Would fire — {detail}.",
+      "wouldNotFireAgg": "Would not fire — {detail}.",
+      "wouldFireAll": "Would fire — all of {total} field verified ({passing}/{total}).",
+      "wouldFireAllPlural": "Would fire — all of {total} fields verified ({passing}/{total}).",
+      "wouldFireAny": "Would fire — more than one of {total} field verified ({passing}/{total}).",
+      "wouldFireAnyPlural": "Would fire — more than one of {total} fields verified ({passing}/{total}).",
+      "wouldNotFireRequiresAll": "Would not fire — {passing} of {total} field verified, this condition requires all.",
+      "wouldNotFireRequiresAllPlural": "Would not fire — {passing} of {total} fields verified, this condition requires all.",
+      "wouldNotFireRequiresAny": "Would not fire — {passing} of {total} field verified, this condition requires at least one.",
+      "wouldNotFireRequiresAnyPlural": "Would not fire — {passing} of {total} fields verified, this condition requires at least one."
+    },
+    "validation": {
+      "patternNoMatch": "Pattern \"{value}\" doesn't match any paths in the retrieved source.",
+      "pathNotInSource": "Path \"{value}\" doesn't resolve to anything in the retrieved source. Fix it, click ⟳ above to refresh, or press Esc to cancel."
+    },
+    "errors": {
+      "noUrl": "No URL configured. Go back to the input-config step and set one.",
+      "failedToRetrieve": "Failed to retrieve",
+      "networkError": "Network error",
+      "couldNotRetrieveTitle": "⚠ Could not retrieve source",
+      "couldNotRetrieveHint": "Check the URL in the input-config step, then click ⟳ above to retry."
+    },
+    "picker": {
+      "title": "Pick watched fields from source",
+      "closeTitle": "Close",
+      "refreshTitle": "Re-fetch the source",
+      "fetching": "Fetching {url}…",
+      "waiting": "Waiting for source data…",
+      "empty": "Empty document.",
+      "doneButton": "Done",
+      "fieldsSelected": "{n} field selected",
+      "fieldsSelectedPlural": "{n} fields selected"
+    }
+  },
+
+  "formatEditor": {
+    "title": "Custom Format Editor",
+    "intro": {
+      "polling": "Click on the paths bellow to insert, or use the .. wildcard shortcuts in the script.",
+      "monitoring": "Press ⟳ to probe the URL; click on the fields bellow to insert their value.",
+      "webhook": "Configure the message that users will receive on Olvid."
+    },
+    "watchedPathsLabel": "Watched paths:",
+    "watchedPathsInsertTitle": "Insert {token}",
+    "sourceTitlePollingFormat": "source.{format}",
+    "sourceTitleWebhook": "payload.json (Test Data)",
+    "sourceTitleMonitor": "monitor-probe.json",
+    "sourceRefreshTitle": "Re-fetch the source",
+    "monitorProbeTitle": "Probe the monitor URL now",
+    "errorInvalidJsonPrettify": "Invalid JSON: Cannot prettify.",
+    "errorAlertNotSaved": "This alert hasn't been saved yet. No payloads in database.",
+    "sourceExampleButton": "Example",
+    "sourceLastReceivedButton": "Last received",
+    "sourceLoadingPolling": "Loading source…",
+    "sourceLoadingMonitor": "Probing endpoint…",
+    "sourceEmptyPolling": "No data yet.",
+    "sourceEmptyMonitor": "Press ⟳ to probe the monitor URL.",
+    "sourceLoadingWebhook": "Loading…",
+    "sourceNoPayloads": "No payloads from this input source have been received yet.",
+    "errors": {
+      "noUrlPolling": "No URL configured for this alert — set one in the alert's polling configuration.",
+      "noUrlMonitoring": "No URL configured for this monitor — set one in the alert's monitoring configuration.",
+      "failedToRetrieveSource": "Failed to retrieve source",
+      "failedToProbeMonitor": "Failed to probe the monitor URL",
+      "jsonError": "Error in JSON: {message}",
+      "handlebarsError": "Error in Handlebars: {message}"
+    },
+    "preview": {
+      "title": "Preview on device",
+      "mailTitle": "Preview in inbox",
+      "placeholder": "Formatted message will appear here...",
+      "sender": "Alerting Bot",
+      "time": "now",
+      "receiver": "Receiver",
+      "subject": "Subject",
+      "mailHint": "Format this Mail message using HTML tags",
+      "olvidHint": " Format this Olvid message using Olvid markdown — see https://olvid.io/faq/format-your-messages/",
+      "mailSyntax" : "Syntax : HTML",
+      "olvidSyntax" : "Syntax : Olvid Markdown"
+    },
+    "mailPreview": {
+      "from": "From",
+      "to": "To",
+      "subject": "Subject",
+      "fromPlaceholder": "Alerting Bot",
+      "toPlaceholder": "recipient",
+      "subjectPlaceholder": "Alert title"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "save": "Save Script",
+      "closeTitle": "Close"
+    },
+    "toolbar": {
+      "loadTemplate": "Load Template",
+      "loadTemplateTitle": "Load template payload",
+      "pickerMode": "Picker mode",
+      "prettify": "Prettify JSON",
+      "clear": "Clear"
+    },
+    "templates": {
+      "fromDatabase": "From database",
+      "fromLibrary": "From library",
+      "lastSuccess": "Last successful payload",
+      "lastFailed": "Last failed payload"
+    }
+  },
+
+  "bundleKind": {
+    "groupLabel": "Bundle channel",
+    "fieldLabel": "Channel",
+    "olvid": "Olvid",
+    "mail": "Email",
+    "pickPrompt": "Pick a channel above to add recipients."
+  },
+
+  "bundleRow": {
+    "tag": "BUNDLE {n}",
+    "untitled": "Untitled bundle",
+    "noDestinations": "No destinations",
+    "editTooltip": "Edit bundle",
+    "removeTooltip": "Remove bundle",
+    "status": {
+      "ready": "Ready",
+      "noDestinations": "No destinations",
+      "noScript": "Custom format set but no script"
+    },
+    "destSummary": {
+      "None": "— no discussions —",
+      "Plural": "{firstTwoNames} + {remaining} more discussions",
+      "PlusOne": "{firstTwoNames} + 1 more discussion"
+    },
+    "fields": {
+      "discussions": "Discussions",
+      "emailRecipients": "Email recipients",
+      "mailSubject": "Mail subject",
+      "format": "Message Format"
+    },
+    "format": {
+      "unformatted": "Brute (raw JSON)",
+      "simple": "Simple (title + description)",
+      "custom": "Custom script",
+      "pollingDefault": "Default (watched fields)",
+      "pollingCustom": "Custom script"
+    },
+    "scriptButton": "Script",
+    "removeTitle": "Remove bundle",
+    "editTitle": "Edit this bundle",
+    "editButton": "Edit"
+  },
+
+  "discussionSelector": {
+    "search": {
+      "loading": "Loading...",
+      "noneAvailable": "No discussions available",
+      "addPlaceholder": "Add a discussion..."
+    },
+    "dropdown": {
+      "noFound": "No discussions found in daemon",
+      "allAdded": "All discussions already added"
+    },
+    "empty": "— no discussions —",
+    "change": "Change"
+  },
+
+  "emailRecipientSelector": {
+    "addPlaceholder": "Add an email address...",
+    "empty": "— no recipients —",
+    "invalidAddress": "Not a valid email address"
+  },
+
+  "inputSourceSelector": {
+    "searchPlaceholder": "Select a source",
+    "changeButton": "Change",
+    "labels": {
+      "polling": "Data Polling",
+      "monitoring": "Monitoring",
+      "webhook": "Webhook"
+    }
+  },
+
+  "alertParamsEditor": {
+    "url": {
+      "label": "URL",
+      "placeholder": "https://example.com/feed.xml",
+      "hint": "Endpoint the alert system will poll."
+    },
+    "format": {
+      "label": "Format",
+      "hint": "Content type returned by the URL."
+    },
+    "interval": {
+      "label": "Poll interval",
+      "every": "every",
+      "at": "at"
+    },
+    "units": {
+      "minutes": "minutes",
+      "hours": "hours",
+      "daily": "daily"
+    },
+    "cron": {
+      "legend": {
+        "minute": "minute",
+        "hour": "hour",
+        "dayOfMonth": "day-of-month",
+        "month": "month",
+        "dayOfWeek": "day-of-week"
+      },
+      "invalid": "Invalid cron expression"
+    }
+  },
+
+  "triggerSelector": {
+    "lockedHint": "— how this source communicates with the alert system",
+    "empty": "Select an input source first."
+  },
+
+  "select": {
+    "placeholder": "Select…"
+  },
+
+  "urlCopyBox": {
+    "copiedTitle": "Copied!",
+    "copyTitle": "Copy URL"
+  },
+
+  "xmlTree": {
+    "leafTitle": "Click to watch: {path}"
+  },
+
+  "monitorEditor": {
+    "url": {
+      "label": "Endpoint URL",
+      "placeholder": "https://example.com/health",
+      "hint": "The URL whose HTTP response status will be watched."
+    },
+    "interval": {
+      "label": "Check interval"
+    },
+    "match": {
+      "label": "Trigger when",
+      "kind": {
+        "codes": "Specific codes",
+        "range": "Range",
+        "notOk": "Any non-2xx",
+        "noHttpResponse": "No HTTP response"
+      },
+      "codesEmpty": "No codes yet — add at least one below.",
+      "codesPlaceholder": "e.g. 404",
+      "codesHint": "The alert fires whenever the response status is in this list.",
+      "addCode": "Add",
+      "notOkHint": "Fires on any response outside the 200-299 range (redirects, client errors, server errors).",
+      "noHttpHint": "Server didn't respond with HTTP protocol : request either failed to reach server or server refused connection",
+      "summary" : {
+        "codes": "Fires on codes : {codes}",
+        "noCode": "Add at least one HTTP code.",
+        "range": "Fires on any {range} response.",
+        "notOk": "Fires on any non-2xx response.",
+        "noHttpResponse": "Fires when the server does not replay with an HTTP response"
+      },
+      "rangeOptions": {
+        "2xx": "2xx — success",
+        "3xx": "3xx — redirect",
+        "4xx": "4xx — client error",
+        "5xx": "5xx — server error"
+      }
+    },
+    "view": {
+      "triggersOn": "Condition",
+      "codes": "Codes: {codes}",
+      "range": "Any {range} response",
+      "notOk": "Any non-2xx response",
+      "noHttpResponse" : "No HTTP response"
+    }
+  },
+
+  "alertLog": {
+    "title": "Status logs",
+    "empty": "No polls recorded yet.",
+    "showDetails": "Show details",
+    "hideDetails": "Hide details",
+    "noAdditionalDetail": "No additional detail.",
+    "channelsAria": "Per-channel dispatch outcome",
+    "status": {
+      "sent": "Sent",
+      "partial": "Partial",
+      "failed": "Failed"
+    },
+    "stage": {
+      "fetch": "Fetch",
+      "parse": "Parse",
+      "evaluate": "Evaluate",
+      "dispatch": "Dispatch"
+    },
+    "channel": {
+      "olvid": "Olvid",
+      "mail": "Email"
+    },
+    "detail": {
+      "stage": "Stage"
+    },
+    "channelTable": {
+      "channel": "Channel",
+      "recipients": "Recipients",
+      "outcome": "Outcome",
+      "error": "Error",
+      "ok": "Delivered",
+      "fail": "Failed"
+    }
+  },
+
+  "auth": {
+    "login": {
+      "title": "Log in",
+      "submit": "Login",
+      "identifierEmail": "Email adress",
+      "identifierUsername": "Username",
+      "password": "Password",
+      "errorInvalidCredentials": "Invalid credentials.",
+      "errorNotActivated": "Your account isn't activated yet. Check your invite email.",
+      "errorPasswordNotAuthorized": "Password authentication is not enabled on this account.",
+      "errorOlvidNotAuthorized": "Olvid authentication is not enabled on this account.",
+      "errorReaction": "Error while receiving reaction",
+      "errorDaemon": "Daemon is offline : Olvid-based authentication is temporarily unavailable.",
+      "error": "An error occured.",
+      "resendVerification": "Resend verification email",
+      "verificationSent": "Verification email sent. Check your inbox.",
+      "forgot": "Forgot my password?",
+      "forgotTitle": "Reset your password",
+      "forgotHint": "Enter your login. We'll send a reset link to whichever channel is bound to this account.",
+      "forgotSubmit": "Re-send password",
+      "forgotBusy": "Sending…",
+      "forgotBackToLogin": "Back to login",
+      "resetSubmitted": "If we recognize this login, we've sent reset instructions to the associated channel. Check your Olvid conversation or your inbox — if nothing arrives, ask an administrator to send you a fresh invitation.",
+      "resetNetworkError": "Couldn't reach the server — please try again.",
+      "olvidTitle": "Log in with Olvid",
+      "olvid": "Olvid",
+      "olvidParagraph": "Receive a message on the associated Olvid profile and add a reaction emoji to log in.",
+      "olvidSent": "A message has been sent to the Olvid discussion linked to user {user}. Add a reaction to authorize connection."
+    },
+    "invite": {
+      "title": "Accept invitation",
+      "hintPassword": "Set at least one authentication method to activate your account.",
+      "hintPasswordWithLogin": "Set at least one authentication method to activate your account with login {login}.",
+      "hintOlvidMethod": "Receive a message and add a reaction on the following Olvid discussion each time you want to login into your account.",
+      "hintPasswordMethod": "Set a password to log in.",
+      "olvidMethod": "Olvid authentication",
+      "passwordMethod": "Password authentication",
+      "passwordPlaceholder": "New password (min 8 chars)",
+      "confirmPasswordPlaceholder": "Confirm new password",
+      "submit": "Activate account",
+      "errorMissingToken": "Missing invitation token.",
+      "errorPasswordsDoNotMatch": "Passwords do not match",
+      "errorTokenInvalid": "This invitation is invalid, expired, or already used.",
+      "errorBadPassword": "Please pick a password of at least 8 characters.",
+      "errorNetwork": "Couldn't reach the server — please try again.",
+      "errorIdentityFetch": "Could not fetch discussion information temporarily. Associated Olvid profile is the one which received the link.",
+      "errorNoMethod": "Please choose an authentication method.",
+      "invalidTitle": "Invitation invalid or expired",
+      "invalidBody": "This invitation link is invalid, expired, or already used. Ask your administrator for a fresh invitation."
+    },
+    "resetPassword": {
+      "title": "Reset your password",
+      "hint": "Pick a new password to finish resetting your account.",
+      "hintWithLogin": "Pick a new password for {login}.",
+      "passwordPlaceholder": "New password (min 8 chars)",
+      "confirmPasswordPlaceholder": "Confirm new password",
+      "submit": "Set new password",
+      "errorMissingToken": "Missing reset token.",
+      "errorPasswordsDoNotMatch": "Passwords do not match",
+      "errorTokenInvalid": "This reset link is invalid, expired, or already used.",
+      "errorBadPassword": "Please pick a password of at least 8 characters.",
+      "errorNetwork": "Couldn't reach the server — please try again.",
+      "invalidTitle": "Reset link invalid or expired",
+      "invalidBody": "This password reset link is invalid, expired, or already used. Request a new one from the login page."
+    },
+    "verify": {
+      "pending": "Verifying…",
+      "successTitle": "Email verified",
+      "successBody": "Your email address is confirmed. You can sign in now.",
+      "successCta": "Go to login",
+      "errorTitle": "Verification failed",
+      "errorBody": "This link is invalid, expired, or already used. Request a new one from the login page.",
+      "errorCta": "Back to login"
+    },
+    "setup": {
+      "title": "First-run setup",
+      "hint": "Paste the ADMIN_KEY from your .env to prove you deployed this instance.",
+      "adminKey": "ADMIN_KEY",
+      "keyNext": "Next",
+      "keyBusy": "Checking…",
+
+      "inviteTitle": "Invite yourself as the first admin",
+      "inviteHint": "Pick a delivery channel — the same one you'd use to invite anyone else — and we'll send you the activation link. You'll set your password by opening it.",
+      "fieldLogin": "Username",
+      "loginPlaceholder": "The name you'll type at sign-in",
+      "fieldName": "Display name (optional)",
+      "namePlaceholder": "Name shown in the app",
+      "fieldEmail": "Email",
+      "emailPlaceholder": "Where to send the activation link",
+      "inviteSubmit": "Send the activation link",
+      "inviteBusy": "Sending…",
+      "back": "Back",
+
+      "doneTitle": "Setup started",
+      "doneMail": "Activation link sent by email. Open it to set your password and sign in.",
+      "doneOlvid": "Activation link sent through Olvid. Open the DM from the bot to set your password.",
+      "doneLink": "Open the activation link below to set your password and sign in.",
+      "doneCta": "Go to login",
+
+      "errorAdminKeyNotConfigured": "ADMIN_KEY is not set on the server. Configure it in .env and restart.",
+      "errorInvalidAdminKey": "That admin key doesn't match the one configured on the server.",
+      "errorAlreadyComplete": "An admin already exists on this deploy.",
+      "errorEmailRequired": "An email address is required for the mail channel.",
+      "errorMailNotConfigured": "SMTP isn't configured on this deploy — pick another channel.",
+      "errorOlvidRequired": "Pick an Olvid contact discussion for the delivery.",
+      "errorFallback": "Could not start setup. Check the inputs and try again."
+    },
+    "users": {
+      "inviteButton": "Invite user",
+      "table": {
+        "login": "Login",
+        "name": "Name",
+        "role": "Role",
+        "status": "Status",
+        "methods": "Authentication methods"
+      },
+      "loginTagEmail": "Login is an email address",
+      "loginTagOlvid": "Login is an Olvid discussion",
+      "loginTagLocal": "Local username",
+      "copyLinkTitle": "Generate & copy an invite link",
+      "resendTitle": "Resend invitation",
+      "confirmDeletePrompt": "Delete user {login}?",
+      "confirmResendPrompt": "Re-send the invitation to {recipient} via {channel}?",
+      "confirmResendConfirm": "Re-send",
+      "resendSuccessTitle": "Invitation sent",
+      "resendSuccessMessage": "A fresh invitation has been sent to {recipient} via {channel}.",
+      "channelMail": "email"
+    },
+    "inviteModal": {
+      "title": "Invite a new user",
+      "channelLabel": "Delivery channel",
+      "channelPillMail": "Email",
+      "channelPillOlvid": "Olvid",
+      "channelPillLink": "Shareable link",
+      "channelPillMailDisabled": "SMTP is not configured on this deploy.",
+      "fieldName": "Name",
+      "namePlaceholder": "Alice",
+      "fieldEmail": "Email",
+      "emailPlaceholder": "alice{'@'}example.com",
+      "fieldUsername": "Username (login)",
+      "usernamePlaceholder": "alice",
+      "fieldRole": "Role",
+      "fieldOlvidDiscussion": "Olvid discussion",
+      "submitMail": "Send by email",
+      "submitMailBusy": "Sending…",
+      "submitLink": "Create & copy link",
+      "submitLinkBusy": "Creating…",
+      "submitOlvid": "Send via Olvid",
+      "submitOlvidBusy": "Sending…",
+      "cancel": "Cancel",
+      "ariaLabel": "Invite user",
+      "errorUserAlreadyActive": "That user already has an active account.",
+      "errorLoginInUse": "That login is already taken. Pick a different one, or resend the invitation from the users list.",
+      "errorEmailInUse": "That email is already tied to another user. Resend the invitation from the users list instead.",
+      "errorOlvidInUse": "That Olvid discussion is already tied to another user. Pick a different discussion.",
+      "errorEmailRequired": "Email is required for a mail invite.",
+      "errorMailNotConfigured": "SMTP is not configured on this deploy.",
+      "errorOlvidRequired": "Pick an Olvid discussion to send the invitation to.",
+      "errorFallback": "Could not create the invitation."
+    },
+    "reveal": {
+      "title": "Invitation link ready",
+      "ariaLabel": "Invite link",
+      "body": "New {role} with login {login} was created. Copy the invite URL below.",
+      "close": "Close"
+    }
+  },
+
+  "pageTitle": {
+    "suffix": "Olvid Alerting",
+    "index": "App",
+    "alertView": "{alert}",
+    "alertList": "Alert list",
+    "alertNew": "New alert",
+    "invite": "Invite",
+    "login": "Login",
+    "reset-password": "Reset password",
+    "setup": "Setup",
+    "users": "Users",
+    "verify": "Verify"
+  },
+
+  "externalMessage": {
+    "olvidLogin": "\uD83D\uDEA8 **Olvid Alerting**\nA login request has been made for user *{login}*.\nReact to this message to complete authentication.",
+    "olvidLoginSuccessful": "\uD83D\uDEA8 **Olvid Alerting**\nLogin complete ✅",
+    "invite": "\uD83D\uDEA8 **Olvid Alerting**\nYou've been invited to Olvid Alerting by {who}\n\nOpen this link to set your password and activate your account (expires in 7 days) :\n{url}",
+    "resetPassword": "\uD83D\uDEA8 **Olvid Alerting**\nA password reset was requested for your Alerting Bot account.\nOpen this link to pick a new password (expires in 1 hour):\n${url}\n\nIf you didn't request this, you can ignore this message."
+  }
+}
