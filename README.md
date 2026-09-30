@@ -72,7 +72,7 @@ Before starting, make sure you have:
 
 Clone the repository :
 ```bash
-git clone https://github.com/olvid/alerting-bot.git
+git clone https://github.com/olvid-io/olvid-alerting-bot alerting-bot
 cd alerting-bot
 ```
 
